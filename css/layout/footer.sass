@@ -1,0 +1,241 @@
+.footer
+    .footer__layout
+        display: Flex
+        width: 100%
+        justify-content: center
+        padding: 80px 0px
+        align-items: center
+        position: relative
+
+        @include desktop-small
+            flex-direction: column
+            gap: 30px
+
+        .anim-elements
+            position: absolute
+            right: 110px
+            top: 150px
+
+            @include desktop-small
+                right: 150px
+                top: 190px
+
+            @include tablet
+                right: 80px
+
+            @include mobile-big
+                right: 30px
+                top: 150px
+
+            @media (max-width: 400px)
+                top:120px
+
+            
+
+
+            .anim-elements__wrapper
+                position: relative
+
+                .zvezdochka
+                    position: absolute
+                    height:35px
+                    animation-name: el-rotate
+                    animation-duration: 5s
+                    animation-iteration-count: infinite
+
+                    @include desktop-small
+                    
+                    img 
+                        max-width: 35px
+
+                @keyframes el-rotate 
+                    0%
+                        transform: rotate(0deg)
+
+                    50%
+                        transform: rotate(360deg)
+
+                    100%
+                        transform: rotate(0deg)
+
+                .to-top
+                    position: absolute
+                    
+                    height:35px
+                    animation-name: el-height
+                    animation-duration: 3s
+                    animation-iteration-count: infinite 
+                    
+
+
+                    img 
+                        max-width: 35px
+                        transform: rotate(270deg)
+
+                @keyframes el-height 
+                    0%
+                        top: 100px
+
+                    
+                    50%
+                        top: 70px
+                    
+                    100%
+                        top: 100px
+                    
+
+
+
+
+
+    .footer__layout__contacts
+        display: flex
+        flex-direction: column
+        gap:70px
+        padding-right: 350px
+
+        @include desktop-small
+            padding-right: 0px 
+            gap: 10px
+
+        .footer__layout__contacts__heading
+            display: Flex
+            align-items: center
+            gap:50px
+
+            h2
+                font-size: 70px
+                font-weight: 700
+
+                @include mobile-big
+                    font-size: 40px
+
+                @include mobile
+                    font-size: 36px
+
+            .rectangle-wrapper
+                width: 115px
+
+                .rectangle
+                    background: $blue
+                    height: 10px
+                    animation-duration:2s
+                    animation-name: el-width
+                    max-width: 115px
+
+            @keyframes el-width
+                from
+                    width: 0px
+               
+                to
+                    width: 115px
+
+
+
+        .footer__layout__contacts__info
+            display: Flex
+            flex-direction: column
+            gap:15px
+
+            a
+                font-weight: 700
+                font-size: 19px
+
+        .footer__layout__contacts__address
+            display: Flex
+            flex-direction: column
+            gap: 10px
+            padding-top:50px
+
+            @include desktop-small
+                padding-top: 0px
+
+            .footer__layout__contacts__address__item
+                display: Flex
+                flex-direction: column
+
+                h3
+                    font-size: 19px
+                    line-height: 1.3
+                    font-weight: 700
+                    @include mobile-big
+                        font-size: 16px
+
+                span
+                    font-size: 19px
+
+                    @include mobile-big
+                        font-size: 16px
+
+    .footer__layout__map
+        position: absolute
+        right: 0px
+        bottom: -40px
+        height:360px
+
+        @include desktop-small
+                position: static
+                width: 100%
+                height: 300px
+
+        iframe
+            width: 560px
+            height: 100%
+
+            @include  desktop-small
+                    width: 100%
+                  
+
+
+
+    .footer__links
+
+        .footer__links-list
+            display: flex
+            gap: 30px
+            width: calc(100% - 560px)
+            flex-wrap: wrap
+
+            @include desktop-small
+                width: auto
+
+            .footer__links-list-item
+
+                a
+                    position: relative
+                    color: $blue
+                    cursor: pointer
+                    line-height: 1 
+                    text-decoration: none 
+                    font-size: 21px
+                    line-height: 1.35
+                    font-weight: 700
+                    transition: 0.3s ease
+
+                    &:after 
+                        display: block
+                        position: absolute
+                        left: 0 
+                        width: 0
+                        height: 2px 
+                        background-color: $blue
+                        content: ""
+                        transition: width 0.3s ease-out
+                            
+
+                    &:hover:after,
+                    &:focus:after 
+                        width: 100%
+
+
+    .footer__hr
+        padding-top:20px
+        display: Flex
+        flex-direction: column
+        gap: 6px
+        
+        hr
+                background-color: #00a0df
+                width: 100%
+                height: 9px
+                border: none
