@@ -4,15 +4,29 @@
 .header
 
     hr
+        margin: 0px 20px
         background: $blue
         height: 5px
         border: 1px solid $blue
+        margin-bottom: 30px
+
+    .sticky
+        position: fixed !important
+        background: white
+        z-index: 3 !important
 
     .header__layout
         display: Flex
         justify-content: space-between
         width: 100%
-        padding-top: 50px
+        top: 0px
+        left: 0px
+        padding: 20px 20px 
+        transition: 0.3s ease
+
+        @include desktop-small
+            position: relative
+            z-index: 2
 
         .header__layout__left
        
@@ -26,6 +40,7 @@
                     img
                         max-width: 160px
 
+       
         .menu--open
             left: 0px !important
 
@@ -43,7 +58,7 @@
                 background: white
                 z-index: 1
                 top:0px
-                height: 100%
+                height: 100vh
                 left: -1000px
                 width: 100%
                 align-items: baseline

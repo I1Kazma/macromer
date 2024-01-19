@@ -1,0 +1,86 @@
+.page-banner {
+  position: relative;
+  top: -70px;
+  height: 820px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.page-banner .page-banner__background {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: -1;
+  top: 0px;
+}
+.page-banner .page-banner__background span {
+  font-size: calc(5em + 10vw);
+  /*font-size: 205px*/
+  color: #f3f3f3;
+  font-weight: 700;
+  line-height: 0.9;
+}
+.page-banner .page-banner__background span div .zvezdochka-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  height: 100%;
+  display: flex;
+  right: 0px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 36%;
+}
+.page-banner .page-banner__background span div .page-banner__zvezdochka {
+  width: 100%;
+  max-width: 35px;
+  height: 35px;
+  animation-name: el-rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  display: flex;
+  align-items: center;
+}
+.page-banner .page-banner__background span:first-child {
+  text-align: left;
+}
+.page-banner .page-banner__background span:nth-child(2) {
+  text-align: center;
+}
+.page-banner .page-banner__background span:last-child {
+  text-align: center;
+  font-size: 100px;
+  padding-top: 30px;
+  padding-left: 300px;
+}
+.page-banner .page-banner__icon {
+  position: absolute;
+  left: 0px;
+  bottom: 350px;
+  max-width: 40px;
+}
+.page-banner .page-banner__title .page-banner__title__layout {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  align-items: end;
+}
+.page-banner .page-banner__title .page-banner__title__layout h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 0.9;
+  font-weight: 700;
+  min-width: 720px;
+}
+.page-banner .page-banner__title .page-banner__title__layout .rectangle-wrapper {
+  margin-left: 35px;
+}
+.page-banner .page-banner__title .page-banner__title__layout .page-banner__title__content {
+  max-width: 405px;
+  width: 100%;
+}
+.page-banner .page-banner__title .page-banner__title__layout .page-banner__title__content span {
+  font-size: 24px;
+}/*# sourceMappingURL=page-banner.css.map */

@@ -11,3 +11,8 @@ menu__close.addEventListener("click", () => {
     menu.classList.remove("menu--open")
     document.body.classList.remove("body-block")
 })
+
+const header = document.querySelector(".header__layout");
+window.addEventListener("scroll", function () {
+  header.classList.toggle("sticky", window.scrollY > 30);
+});

@@ -12,6 +12,9 @@ $font: 'Manrope', sans-serif
 
 /*Базовые стили проекта*/
 
+html
+    scroll-behavior: smooth
+
 *
     padding: 0px
     margin: 0px
@@ -22,8 +25,7 @@ body, ul, li, a, button, h1, h2, h3, h4, input, textarea, hr
     padding: 0px
     margin: 0px
     font-family: $font
-
-.header, .main, .footer
+.main, .footer
     margin: 0px 20px
 
 ul
@@ -38,3 +40,36 @@ a
 
 .body-block
     overflow: hidden
+
+
+.main
+    display: flex
+    flex-direction: column
+    gap: 80px
+    align-items: center
+
+h2
+    font-size: 100px
+
+    @include desktop-small
+        font-size: 70px
+        
+
+
+
+.rectangle-wrapper
+    width: 115px
+
+    .rectangle
+        background: $blue
+        height: 10px
+        animation-duration:2s
+        animation-name: el-width
+        max-width: 115px
+
+    @keyframes el-width
+        from
+            width: 0px
+               
+        to
+             width: 115px
