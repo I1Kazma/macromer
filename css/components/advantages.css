@@ -1,0 +1,65 @@
+.advantages {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin: 0px 20px;
+}
+.advantages .advantages__background {
+  position: absolute;
+  z-index: 0;
+}
+.advantages .advantages__background span {
+  font-size: calc(5em + 10vw);
+}
+.advantages__content__heading {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-right: 30px;
+  justify-content: end;
+}
+.advantages__content__text {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.advantages__content__text__items {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.advantages__content__text__item {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.advantages__content__text__item h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.advantages__content__text__item span {
+  font-size: 20px;
+}
+.advantages__content__text__item:first-child {
+  position: absolute;
+  left: 30%;
+}
+.advantages__content__text__item:nth-child(2) {
+  position: absolute;
+  right: 50px;
+  top: 25%;
+  max-width: 336px;
+}
+.advantages__content__text__item:nth-child(3) {
+  position: absolute;
+  left: 50px;
+  top: 35%;
+  max-width: 424px;
+}
+.advantages__content__text__item:last-child {
+  position: absolute;
+  bottom: 200px;
+  left: 40%;
+  max-width: 336px;
+}/*# sourceMappingURL=advantages.css.map */

@@ -1,0 +1,83 @@
+.actual
+    position: relative
+    min-height: 100vh
+    width: 100%
+    padding: 0px 20px
+
+    .actual__background
+        position: absolute
+        z-index: 0
+        bottom: 0px
+
+        span
+            font-size: calc(7em + 8vw)
+            font-weight: 700
+            color: $grey
+            display: flex
+
+    &__content
+        position: relative
+
+        &__heading
+            display: flex
+            align-items: center
+            gap: 30px
+            padding-right: 30px
+            justify-content: center
+            position: relative
+            z-index: 1
+
+            h2
+                @media (max-width: 1250px)
+                    font-size: 75px
+
+        &__text
+            display: flex
+            height: 100%
+            width: 100%
+            padding-top: 50px
+            flex-direction: column
+            gap: 30px
+            position: relative
+            z-index: 1
+            align-items: center
+
+            .zvezdochka
+                left: 0px
+                img
+                    max-width: 50px
+
+            &__items
+                display: flex
+                height: 100%
+                width: 100%
+                flex-wrap: wrap
+                justify-content: flex-end
+                gap: 20px
+                MAX-WIDTH: 1100px
+
+            &__item
+                display: flex
+                @media (max-width: 1250px)
+                    position: static !important
+                    width: 100%
+
+                &__wrapper
+                    max-width: 500px
+                    display: flex
+                    flex-direction: column
+                    gap: 30px
+
+                    @media (max-width: 1250px)
+                        max-width: 536px !important
+
+                h3
+                    font-size: 24px
+                    font-weight: 600
+
+                ul
+                    list-style-type: disc
+                    padding: 0px 20px
+
+                span
+                    font-size: 20px
