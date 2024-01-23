@@ -1,3 +1,4 @@
+@import '../utils/utils'
 .page-banner
     position: relative
     top: -70px
@@ -7,6 +8,15 @@
     align-items: flex-end
     margin: 0px 20px
 
+    @include desktop-small
+        height: 620px
+
+    @include tablet
+        height: 650px
+
+    @include mobile
+        height: 550px
+
     .page-banner__background
         position: absolute
         display: flex
@@ -15,12 +25,30 @@
         z-index: -1
         top: 0px
 
+        @include mobile-big
+            gap: 30px
+
+        @include mobile
+            top: 45px
+
         span
             font-size: calc(5em + 10vw)
             /*font-size: 205px*/
             color: #f3f3f3
             font-weight: 700
             line-height: 0.9
+
+            @include desktop-small
+                font-size: calc(4em + 10vw)
+
+            @include tablet
+                font-size: calc(3em + 10vw)
+
+            @include mobile-big
+                font-size: calc(2em + 10vw)
+
+            @include mobile
+                font-size: calc(1em + 10vw)
 
             div
 
@@ -35,6 +63,11 @@
                     justify-content: center
                     padding-top: calc(100% - 64%)
 
+                    @include tablet
+                        display: none
+
+                    @include mobile-big
+                        display: flex
 
                 .page-banner__zvezdochka
                     width: 100%
@@ -46,6 +79,14 @@
                     display: flex
                     align-items: center
 
+                    @include mobile-big
+                        display: flex
+                        height: 15px
+                        width: 15px
+
+                    @include mobile
+                        height: 10px
+                        width: 10px
 
             &:first-child
                 text-align: left
@@ -56,12 +97,26 @@
                 font-size: 100px
                 padding-top: 30px
                 padding-left: 300px
-            
+
+                @include tablet
+                    padding-left: 0px
+                    text-align: end
+
+                @include mobile-big
+                    padding-top: 0px
+                    font-size: calc(2em + 10vw)
+
     .page-banner__icon
         position: absolute
         left: 0px
         bottom: 350px
         max-width: 40px
+
+        @include mobile
+            position: absolute
+            left: 20%
+            bottom: 300px
+            max-width: 25px
 
     .page-banner__title
 
@@ -71,24 +126,51 @@
             gap: 20px
             align-items: end
 
-            h2 
+            @include tablet
+                flex-direction: column
+                align-items: flex-start
+
+            @include mobile
+                gap: 40px
+
+            h2
                 display: flex
                 flex-wrap: wrap
                 align-items: center
                 line-height: 0.9
                 font-weight: 700
-                min-width: 720px
-                
+                min-width: 778px
+                position: relative
+
+                @include desktop-small
+                    min-width: auto
+
+                @include mobile-big
+                    font-size: 50px
+
+                @include mobile
+                    font-size: 44px
+                    line-height: 44px
 
             .rectangle-wrapper
                 margin-left: 35px
 
+                @include desktop-small
+                    position: absolute
+                    bottom: 17px
+                    left: 50%
+
+                @include mobile
+                    bottom: 10px
+                    left: 45%
+
             .page-banner__title__content
-                max-width:405px
+                max-width: 405px
                 width: 100%
                 span
-                    font-size: 24px
-
-
-
-
+                    font-size: 23px
+                    font-weight: 500
+                    @include mobile-big
+                        font-size: 20px
+                    @include mobile
+                        font-size: 17px

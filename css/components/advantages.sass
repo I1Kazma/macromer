@@ -3,15 +3,31 @@
     min-height: 100vh
     width: 100%
     padding: 0px 20px
+    overflow: hidden
 
     .advantages__background
         position: absolute
         z-index: 0
 
+        @include desktop-small
+            top: 30%
+
         span
             font-size: calc(7em + 8vw)
             font-weight: 700
             color: $grey
+
+            @include desktop-small
+                font-size: calc(5em + 8vw)
+
+            @include tablet
+                font-size: calc(4em + 8vw)
+
+            @include mobile-big
+                font-size: calc(2.5em + 8vw)
+
+            @include mobile
+                font-size: calc(2em + 8vw)
 
             div
 
@@ -22,7 +38,9 @@
                     display: flex
                     justify-content: center
                     align-items: center
-              
+
+                    @include tablet
+                        display: none
 
                 .actual__zvezdochka
                     width: 100%
@@ -44,9 +62,19 @@
             position: relative
             z-index: 1
 
+            @include tablet
+                flex-direction: column
+                align-items: baseline
+
             h2
                 @media (max-width: 1250px)
                     font-size: 75px
+
+                @include tablet
+                    font-size: 55px
+
+                @include mobile-big
+                    font-size: 45px
 
         &__text
             display: flex
@@ -98,8 +126,14 @@
                     font-size: 24px
                     font-weight: 600
 
+                    @include mobile-big
+                        font-size: 20px
+
                 span
                     font-size: 20px
+
+                    @include mobile-big
+                        font-size: 17px
 
                 &:first-child
                     position: absolute

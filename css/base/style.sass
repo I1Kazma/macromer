@@ -44,8 +44,20 @@ a
 .main
     display: flex
     flex-direction: column
-    gap: 80px
+    gap: 100px
     align-items: center
+
+    @include desktop-small
+        gap: 70px
+
+    @include tablet
+        gap: 60px
+
+    @include mobile-big
+        gap: 50px
+
+    @include mobile
+        gap: 50px
 
 h2
     font-size: 100px

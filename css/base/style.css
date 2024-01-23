@@ -73,8 +73,28 @@ a {
 .main {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 100px;
   align-items: center;
+}
+@media (max-width: 992px) {
+  .main {
+    gap: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    gap: 60px;
+  }
+}
+@media (max-width: 576px) {
+  .main {
+    gap: 50px;
+  }
+}
+@media (max-width: 380px) {
+  .main {
+    gap: 50px;
+  }
 }
 
 h2 {
