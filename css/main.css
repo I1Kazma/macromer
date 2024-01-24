@@ -413,7 +413,7 @@ h2 {
 
 .header {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 .header hr {
   margin: 0px 20px;
@@ -1388,7 +1388,7 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .advantages .advantages__background span div .zvezdochka-wrapper {
     display: none;
   }
@@ -1565,11 +1565,35 @@ h2 {
   z-index: 0;
   bottom: 0px;
 }
+@media (max-width: 992px) {
+  .actual .actual__background {
+    top: 30%;
+  }
+}
 .actual .actual__background span {
   font-size: calc(7em + 8vw);
   font-weight: 700;
   color: #f3f3f3;
-  display: flex;
+}
+@media (max-width: 992px) {
+  .actual .actual__background span {
+    font-size: calc(5em + 8vw);
+  }
+}
+@media (max-width: 768px) {
+  .actual .actual__background span {
+    font-size: calc(4em + 8vw);
+  }
+}
+@media (max-width: 576px) {
+  .actual .actual__background span {
+    font-size: calc(2.5em + 8vw);
+  }
+}
+@media (max-width: 380px) {
+  .actual .actual__background span {
+    font-size: calc(2em + 8vw);
+  }
 }
 .actual__content {
   position: relative;
@@ -1584,8 +1608,24 @@ h2 {
   z-index: 1;
 }
 @media (max-width: 1250px) {
+  .actual__content__heading {
+    padding-left: 0px;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 1250px) {
   .actual__content__heading h2 {
     font-size: 75px;
+  }
+}
+@media (max-width: 768px) {
+  .actual__content__heading h2 {
+    font-size: 55px;
+  }
+}
+@media (max-width: 576px) {
+  .actual__content__heading h2 {
+    font-size: 45px;
   }
 }
 .actual__content__text {
@@ -1601,9 +1641,25 @@ h2 {
 }
 .actual__content__text .zvezdochka {
   left: 0px;
+  top: -25px;
+  max-width: 50px;
+  height: 50px;
 }
 .actual__content__text .zvezdochka img {
   max-width: 50px;
+  height: 50px;
+}
+@media (max-width: 768px) {
+  .actual__content__text .zvezdochka {
+    bottom: 250px;
+    top: auto;
+  }
+}
+@media (max-width: 576px) {
+  .actual__content__text .zvezdochka {
+    right: 0px;
+    left: auto;
+  }
 }
 .actual__content__text__items {
   display: flex;
@@ -1613,6 +1669,19 @@ h2 {
   justify-content: flex-end;
   gap: 20px;
   MAX-WIDTH: 1100px;
+}
+@media (max-width: 1250px) {
+  .actual__content__text__items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, auto));
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .actual__content__text__items {
+    display: flex;
+  }
 }
 .actual__content__text__item {
   display: flex;
@@ -1636,14 +1705,41 @@ h2 {
 }
 .actual__content__text__item h3 {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
+}
+@media (max-width: 576px) {
+  .actual__content__text__item h3 {
+    font-size: 20px;
+  }
 }
 .actual__content__text__item ul {
   list-style-type: disc;
   padding: 0px 20px;
 }
+.actual__content__text__item ul li {
+  font-size: 20px;
+}
+@media (max-width: 576px) {
+  .actual__content__text__item ul li {
+    font-size: 17px;
+  }
+}
 .actual__content__text__item span {
   font-size: 20px;
+}
+@media (max-width: 576px) {
+  .actual__content__text__item span {
+    font-size: 17px;
+  }
+}
+.actual__content__text .actual__content__text__item:first-child {
+  grid-area: 1/1/1/3;
+}
+.actual__content__text .actual__content__text__item:nth-child(2) {
+  grid-area: 1/3/1/5;
+}
+.actual__content__text .actual__content__text__item:last-child {
+  grid-area: 2/2/2/4;
 }
 
 @keyframes el-rotate {
@@ -1862,6 +1958,26 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 992px) {
+  .contact-us {
+    height: 75vh;
+  }
+}
+@media (max-width: 576px) {
+  .contact-us {
+    height: 60vh;
+  }
+}
+@media (max-width: 992px) {
+  .contact-us__background-text {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
 .contact-us__background-text span {
   color: #f3f3f3;
   position: absolute;
@@ -1871,6 +1987,15 @@ h2 {
   line-height: 0.9;
   opacity: 0.25;
 }
+@media (max-width: 992px) {
+  .contact-us__background-text span {
+    top: auto !important;
+    bottom: auto !important;
+    right: auto !important;
+    left: auto !important;
+    position: relative;
+  }
+}
 .contact-us__background-text span:first-child {
   left: 0px;
   top: 0px;
@@ -1879,9 +2004,19 @@ h2 {
   left: 0px;
   bottom: 20px;
 }
+@media (max-width: 992px) {
+  .contact-us__background-text span:nth-child(2) {
+    text-align: center;
+  }
+}
 .contact-us__background-text span:last-child {
   right: 0px;
   bottom: 20px;
+}
+@media (max-width: 992px) {
+  .contact-us__background-text span:last-child {
+    text-align: end;
+  }
 }
 .contact-us .zvezdochka {
   right: 100px;
@@ -1891,6 +2026,18 @@ h2 {
 .contact-us .zvezdochka img {
   max-width: 35px;
 }
+@media (max-width: 992px) {
+  .contact-us .zvezdochka {
+    bottom: 200px;
+    top: auto;
+  }
+}
+@media (max-width: 576px) {
+  .contact-us .zvezdochka {
+    top: 100px;
+    bottom: auto;
+  }
+}
 .contact-us__content {
   display: flex;
   width: 100%;
@@ -1898,11 +2045,28 @@ h2 {
   max-width: 600px;
   height: 70%;
   justify-content: space-evenly;
+  padding: 0px 20px;
+}
+@media (max-width: 576px) {
+  .contact-us__content {
+    height: 50%;
+    justify-content: space-between;
+  }
 }
 .contact-us__content__heading {
   position: relative;
   z-index: 2;
   max-width: 600px;
+}
+@media (max-width: 768px) {
+  .contact-us__content__heading {
+    max-width: 425px;
+  }
+}
+@media (max-width: 576px) {
+  .contact-us__content__heading {
+    max-width: 375px;
+  }
 }
 .contact-us__content__heading .rectangle-wrapper {
   position: absolute;
@@ -1912,8 +2076,35 @@ h2 {
 .contact-us__content__heading .rectangle-wrapper .rectangle {
   background: white;
 }
+@media (max-width: 768px) {
+  .contact-us__content__heading .rectangle-wrapper {
+    bottom: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .contact-us__content__heading .rectangle-wrapper {
+    bottom: 22px;
+    right: auto;
+    left: 130px;
+  }
+}
 .contact-us__content__heading h2 {
   color: white;
+}
+@media (max-width: 1250px) {
+  .contact-us__content__heading h2 {
+    font-size: 75px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-us__content__heading h2 {
+    font-size: 55px;
+  }
+}
+@media (max-width: 576px) {
+  .contact-us__content__heading h2 {
+    font-size: 45px;
+  }
 }
 .contact-us__content__text {
   position: relative;
@@ -1923,4 +2114,9 @@ h2 {
 .contact-us__content__text span {
   color: white;
   font-size: 20px;
+}
+@media (max-width: 576px) {
+  .contact-us__content__text span {
+    font-size: 17px;
+  }
 }/*# sourceMappingURL=main.css.map */
