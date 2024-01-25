@@ -235,6 +235,7 @@
 @media (max-width: 992px) {
   .page-banner .page-banner__title .page-banner__title__layout h2, .page-banner .page-banner__title .page-banner__title__layout h1 {
     min-width: auto;
+    font-size: 60px;
   }
 }
 @media (max-width: 576px) {
@@ -261,6 +262,19 @@
     position: absolute;
     bottom: 17px;
     left: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .page-banner .page-banner__title .page-banner__title__layout .rectangle-wrapper {
+    bottom: 67px;
+    right: 20px;
+    left: auto;
+  }
+}
+@media (max-width: 620px) {
+  .page-banner .page-banner__title .page-banner__title__layout .rectangle-wrapper {
+    bottom: 16px;
+    left: 37%;
   }
 }
 @media (max-width: 380px) {

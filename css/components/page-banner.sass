@@ -162,6 +162,7 @@
 
                 @include desktop-small
                     min-width: auto
+                    font-size: 60px
 
                 @include mobile-big
                     font-size: 50px
@@ -181,6 +182,14 @@
                     bottom: 17px
                     left: 50%
 
+                @include tablet
+                    bottom: 67px
+                    right: 20px
+                    left: auto
+
+                @media (max-width: 620px)
+                    bottom: 16px
+                    left: 37%
                 @include mobile
                     bottom: 10px
                     left: 45%
