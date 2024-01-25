@@ -1583,7 +1583,7 @@ h2 {
     font-size: 40px;
   }
 }
-@nedia (max-width: 350px) {
+@media (max-width: 350px) {
   .advantages__content__heading h2 {
     font-size: 38px;
   }
