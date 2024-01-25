@@ -45,15 +45,35 @@
                 padding-left: 0px
                 justify-content: flex-end
 
+            @include mobile-big
+                justify-content: normal
+
+            .rectangle-wrapper
+                @include mobile-big
+                    position: absolute
+                    top: 80px
+                    right: 37%
+
+                @include mobile
+                    position: absolute
+                    top: 74px
+                    right: 4%
+                    order: 3
+
             h2
                 @media (max-width: 1250px)
                     font-size: 75px
 
                 @include tablet
-                    font-size: 55px
+                    font-size: 50px
 
                 @include mobile-big
-                    font-size: 45px
+                    font-size: 50px
+                    order: 1
+
+                @include mobile
+                    font-size: 40px
+                    order: 1
 
         &__text
             display: flex
@@ -131,13 +151,13 @@
                         font-size: 20px
 
                         @include mobile-big
-                            font-size: 17px
+                            font-size: 15px
 
                 span
                     font-size: 20px
 
                     @include mobile-big
-                        font-size: 17px
+                        font-size: 15px
 
             .actual__content__text__item:first-child
                 grid-area: 1/1/1/3

@@ -42,6 +42,8 @@
             .header__logo
 
                 a
+                    height: 100%
+                    display: flex
 
                     img
                         max-width: 160px
@@ -170,6 +172,9 @@
 
             @include desktop-small
                 display: flex
+                
+            @include tablet 
+                padding: 10px
 
             &:hover
                 background: white

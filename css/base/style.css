@@ -73,7 +73,7 @@ a {
 .main {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 200px;
   align-items: center;
 }
 @media (max-width: 992px) {

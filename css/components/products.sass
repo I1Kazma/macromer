@@ -19,13 +19,25 @@
         @include desktop-small
             padding-left: 0px
 
+        @include mobile-big
+            justify-content: flex-start
+
         .rectangle-wrapper
             @include mobile-big
                 order: 2
+                position: absolute
+                right: -55px
+                top: 28px
+
+            @include mobile
+                right: -60px
 
         h2
             @include mobile-big
                 font-size: 50px
+
+            @include mobile
+                font-size: 42px
 
         .half-circle
             position: absolute
@@ -62,6 +74,9 @@
                 @include mobile-big
                     font-size: calc(1.5em + 0.5vw)
 
+                @include mobile
+                    font-size: 19px
+
             span
                 font-size: 24px
 
@@ -79,11 +94,14 @@
             justify-content: center !important
             align-items: center !important
 
+            @include mobile
+                padding: 0px
+
             img
                 max-width: 64px
 
             span
-                font-size: calc(5em + 5vw)
+                font-size: calc(5em + 3vw)
                 color: $grey
                 line-height: 0.9
                 font-weight: 700
@@ -96,6 +114,10 @@
                     width: 190px
                     font-size: calc(2.5em + 8vw)
 
+                @include mobile
+                    font-size: 67px
+                    padding-left: 20px
+
         .products__item
             display: flex
             flex-direction: column
@@ -106,11 +128,20 @@
                 grid-area: auto !important
                 gap: 20px
 
+            @include mobile-big
+                padding: 20px
+
             li
                 font-size: calc(7px + 1vw)
+                line-height: 33px
 
                 @include mobile-big
                     font-size: calc(7px + 2vw)
+                    line-height: 30px
+
+                @include mobile
+                    font-size: 15px
+                    line-height: 23px
 
         .products__item:nth-child(3)
             @include desktop-small

@@ -11,6 +11,10 @@
             flex-direction: column
             gap: 30px
 
+        @include mobile
+            padding: 50px 0px
+            overflow: hidden 
+
         .anim-elements
             position: absolute
             right: 110px
@@ -27,69 +31,63 @@
                 right: 30px
                 top: 150px
 
+            @include mobile
+                right: 40px
+
             @media (max-width: 400px)
-                top:120px
-
-            
-
+                top: 120px
 
             .anim-elements__wrapper
                 position: relative
 
                 .zvezdochka
                     position: absolute
-                    height:35px
+                    height: 35px
                     animation-name: el-rotate
                     animation-duration: 5s
                     animation-iteration-count: infinite
 
                     @include desktop-small
-                    
-                    img 
-                        max-width: 35px
 
-               
+                    img
+                        max-width: 35px
 
                 .to-top
                     position: absolute
-                    
-                    height:35px
+
+                    height: 35px
                     animation-name: el-height
                     animation-duration: 3s
-                    animation-iteration-count: infinite 
-                    
+                    animation-iteration-count: infinite
 
-
-                    img 
+                    img
                         max-width: 35px
                         transform: rotate(270deg)
 
-                @keyframes el-height 
+                @keyframes el-height
                     0%
                         top: 100px
 
-                    
                     50%
                         top: 70px
-                    
+
                     100%
                         top: 100px
-                    
 
     .footer__layout__contacts
         display: flex
         flex-direction: column
-        gap:70px
+        gap: 70px
         padding-right: 350px
 
         @include desktop-small
-            padding-right: 0px 
+            padding-right: 0px
             gap: 10px
 
         .footer__layout__contacts__heading
             display: Flex
             align-items: center
-            gap:50px
+            gap: 50px
 
             h2
                 font-size: 70px
@@ -104,19 +102,22 @@
             .rectangle-wrapper
                 width: 115px
 
+                @include mobile
+                    position: absolute
+                    right: -30px
+                    top: 72px
+
                 .rectangle
                     background: $blue
                     height: 10px
-                    animation-duration:2s
+                    animation-duration: 2s
                     animation-name: el-width
                     max-width: 115px
-
-
 
         .footer__layout__contacts__info
             display: Flex
             flex-direction: column
-            gap:15px
+            gap: 15px
 
             a
                 font-weight: 700
@@ -126,7 +127,7 @@
             display: Flex
             flex-direction: column
             gap: 10px
-            padding-top:50px
+            padding-top: 50px
 
             @include desktop-small
                 padding-top: 0px
@@ -152,22 +153,19 @@
         position: absolute
         right: 0px
         bottom: -40px
-        height:360px
+        height: 360px
 
         @include desktop-small
-                position: static
-                width: 100%
-                height: 300px
+            position: static
+            width: 100%
+            height: 300px
 
         iframe
             width: 560px
             height: 100%
 
             @include  desktop-small
-                    width: 100%
-                  
-
-
+                width: 100%
 
     .footer__links
 
@@ -186,37 +184,35 @@
                     position: relative
                     color: $blue
                     cursor: pointer
-                    line-height: 1 
-                    text-decoration: none 
+                    line-height: 1
+                    text-decoration: none
                     font-size: 21px
                     line-height: 1.35
                     font-weight: 700
                     transition: 0.3s ease
 
-                    &:after 
+                    &:after
                         display: block
                         position: absolute
-                        left: 0 
+                        left: 0
                         width: 0
-                        height: 2px 
+                        height: 2px
                         background-color: $blue
                         content: ""
                         transition: width 0.3s ease-out
-                            
 
                     &:hover:after,
-                    &:focus:after 
+                    &:focus:after
                         width: 100%
 
-
     .footer__hr
-        padding-top:20px
+        padding-top: 20px
         display: Flex
         flex-direction: column
         gap: 6px
-        
+
         hr
-                background-color: #00a0df
-                width: 100%
-                height: 9px
-                border: none
+            background-color: #00a0df
+            width: 100%
+            height: 9px
+            border: none
