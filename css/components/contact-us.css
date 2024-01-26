@@ -66,10 +66,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 * {
   padding: 0px;
   margin: 0px;
@@ -191,11 +187,12 @@ h2 {
 }
 
 .rectangle-wrapper {
+  padding-top: 10px;
   width: 115px;
 }
 .rectangle-wrapper .rectangle {
   background: #00a0df;
-  height: 10px;
+  height: 7px;
   animation-duration: 2s;
   animation-name: el-width;
   max-width: 115px;
@@ -327,7 +324,7 @@ h2 {
 }
 .contact-us__content__heading .rectangle-wrapper {
   position: absolute;
-  right: 120px;
+  right: 80px;
   bottom: 55px;
 }
 .contact-us__content__heading .rectangle-wrapper .rectangle {

@@ -131,17 +131,21 @@
             @include mobile-big
                 padding: 20px
 
-            li
-                font-size: calc(7px + 1vw)
-                line-height: 33px
+            ul
+                display: flex
+                flex-direction: column
+                gap: 10px
+                padding-top: 15px
 
-                @include mobile-big
-                    font-size: calc(7px + 2vw)
-                    line-height: 30px
+                li
+                    font-size: calc(7px + 1vw)
+                    line-height: 20px
 
-                @include mobile
-                    font-size: 15px
-                    line-height: 23px
+                    @include mobile-big
+                        font-size: calc(7px + 2vw)
+
+                    @include mobile
+                        font-size: 15px
 
         .products__item:nth-child(3)
             @include desktop-small
@@ -184,9 +188,13 @@
                 grid-area: 2/4/3/2
 
         .products__item:nth-child(7)
-            @include tablet
-                position: absolute !important
-                left: -100px
+            img
+                display: none
+                @include tablet
+
+                    display: flex
+
+                
 
         .products__item:nth-child(8)
             @include desktop-small
