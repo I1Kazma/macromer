@@ -279,7 +279,6 @@
 }
 @media (max-width: 380px) {
   .page-banner .page-banner__title .page-banner__title__layout .rectangle-wrapper {
-    bottom: 10px;
     left: 45%;
   }
 }

@@ -190,6 +190,11 @@ h2 {
   padding-top: 10px;
   width: 115px;
 }
+@media (max-width: 380px) {
+  .rectangle-wrapper {
+    padding-top: 0px;
+  }
+}
 .rectangle-wrapper .rectangle {
   background: #00a0df;
   height: 7px;
@@ -405,6 +410,11 @@ h2 {
 .rectangle-wrapper {
   padding-top: 10px;
   width: 115px;
+}
+@media (max-width: 380px) {
+  .rectangle-wrapper {
+    padding-top: 0px;
+  }
 }
 .rectangle-wrapper .rectangle {
   background: #00a0df;
@@ -1138,7 +1148,6 @@ h2 {
 }
 @media (max-width: 380px) {
   .page-banner .page-banner__title .page-banner__title__layout .rectangle-wrapper {
-    bottom: 10px;
     left: 45%;
   }
 }
@@ -2150,6 +2159,11 @@ h2 {
 .rectangle-wrapper {
   padding-top: 10px;
   width: 115px;
+}
+@media (max-width: 380px) {
+  .rectangle-wrapper {
+    padding-top: 0px;
+  }
 }
 .rectangle-wrapper .rectangle {
   background: #00a0df;
