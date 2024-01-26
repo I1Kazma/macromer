@@ -63,7 +63,7 @@
             z-index: 1
 
             .rectangle-wrapper
-               
+
                 @include mobile
                     position: absolute
                     top: 28px
@@ -153,6 +153,9 @@
                     position: absolute
                     left: 40%
 
+                    span, h3
+                        transition-delay: 0.3s
+
                     .advantages__content__text__item__wrapper
 
                     @media (max-width: 1250px)
@@ -162,6 +165,9 @@
                     position: absolute
                     right: 50px
                     top: 340px
+
+                    span, h3
+                        transition-delay: 0.6s
 
                     @media (max-width: 1250px)
                         justify-content: flex-start
@@ -174,9 +180,12 @@
                     left: 50px
                     top: 450px
 
+                    span, h3
+                        transition-delay: 0.7s
+
                     @media (max-width: 1250px)
                         justify-content: flex-end
-                        
+
                     @include mobile-big
                         padding-left: 36px
 
@@ -187,6 +196,9 @@
                     position: absolute
                     bottom: 100px
                     left: 40%
+
+                    span, h3
+                        transition-delay: 0.4s
 
                     @media (max-width: 1250px)
                         justify-content: flex-start

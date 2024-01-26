@@ -190,6 +190,11 @@ h2 {
   padding-top: 10px;
   width: 115px;
 }
+@media (max-width: 380px) {
+  .rectangle-wrapper {
+    padding-top: 0px;
+  }
+}
 .rectangle-wrapper .rectangle {
   background: #00a0df;
   height: 7px;
@@ -204,6 +209,24 @@ h2 {
   to {
     width: 115px;
   }
+}
+
+.opacity-anim {
+  opacity: 0;
+}
+
+.opacity-anim.opacity-show {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+._active {
+  opacity: 1 !important;
+}
+
+._anim-items {
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 .contact-us {
@@ -239,7 +262,7 @@ h2 {
   color: #f3f3f3;
   font-weight: 700;
   line-height: 0.9;
-  opacity: 0.25;
+  opacity: 0.25 !important;
 }
 @media (max-width: 992px) {
   .contact-us__background-text span {

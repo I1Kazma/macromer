@@ -902,6 +902,18 @@ h2 {
   height: 9px;
   border: none;
 }
+.footer .footer__hr hr:first-child {
+  transition-delay: 0.3s;
+}
+.footer .footer__hr hr:nth-child(2) {
+  transition-delay: 0.5s;
+}
+.footer .footer__hr hr:nth-child(3) {
+  transition-delay: 0.7s;
+}
+.footer .footer__hr hr:last-child {
+  transition-delay: 0.9s;
+}
 
 @keyframes el-rotate {
   0% {
@@ -1347,6 +1359,14 @@ h2 {
 }
 .products .products__items .item-white img {
   max-width: 64px;
+  position: relative;
+  transition: 1.2s;
+}
+.products .products__items .item-white img._anim-items {
+  left: -80px;
+}
+.products .products__items .item-white img._active {
+  left: 0px;
 }
 .products .products__items .item-white span {
   font-size: calc(5em + 3vw);
@@ -1407,7 +1427,7 @@ h2 {
 }
 .products .products__items .products__item ul li {
   font-size: calc(7px + 1vw);
-  line-height: 22px;
+  line-height: 24px;
 }
 @media (max-width: 768px) {
   .products .products__items .products__item ul li {
@@ -1746,6 +1766,9 @@ h2 {
   position: absolute;
   left: 40%;
 }
+.advantages__content__text__item:first-child span, .advantages__content__text__item:first-child h3 {
+  transition-delay: 0.3s;
+}
 @media (max-width: 1250px) {
   .advantages__content__text__item:first-child {
     justify-content: center;
@@ -1755,6 +1778,9 @@ h2 {
   position: absolute;
   right: 50px;
   top: 340px;
+}
+.advantages__content__text__item:nth-child(2) span, .advantages__content__text__item:nth-child(2) h3 {
+  transition-delay: 0.6s;
 }
 @media (max-width: 1250px) {
   .advantages__content__text__item:nth-child(2) {
@@ -1768,6 +1794,9 @@ h2 {
   position: absolute;
   left: 50px;
   top: 450px;
+}
+.advantages__content__text__item:nth-child(3) span, .advantages__content__text__item:nth-child(3) h3 {
+  transition-delay: 0.7s;
 }
 @media (max-width: 1250px) {
   .advantages__content__text__item:nth-child(3) {
@@ -1786,6 +1815,9 @@ h2 {
   position: absolute;
   bottom: 100px;
   left: 40%;
+}
+.advantages__content__text__item:last-child span, .advantages__content__text__item:last-child h3 {
+  transition-delay: 0.4s;
 }
 @media (max-width: 1250px) {
   .advantages__content__text__item:last-child {
@@ -2274,7 +2306,7 @@ h2 {
   color: #f3f3f3;
   font-weight: 700;
   line-height: 0.9;
-  opacity: 0.25;
+  opacity: 0.25 !important;
 }
 @media (max-width: 992px) {
   .contact-us__background-text span {
