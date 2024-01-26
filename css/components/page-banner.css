@@ -161,6 +161,9 @@
     opacity: 0.5;
   }
 }
+.page-banner .page-banner__background span:nth-child(2).opacity-anim.opacity-show {
+  transition-delay: 0.3s;
+}
 .page-banner .page-banner__background span:last-child {
   text-align: center;
   font-size: 100px;
@@ -178,6 +181,9 @@
     padding-top: 0px;
     font-size: calc(2em + 10vw);
   }
+}
+.page-banner .page-banner__background span:last-child:last-child.opacity-anim.opacity-show {
+  transition-delay: 0.6s;
 }
 .page-banner .page-banner__icon {
   position: absolute;
