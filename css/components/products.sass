@@ -97,6 +97,13 @@
             @include mobile
                 padding: 0px
 
+            .zvezdochka
+                @media (max-width: 900px)
+                    display: none
+
+                @include tablet
+                    display: flex
+
             img
                 max-width: 64px
 
@@ -134,12 +141,20 @@
             ul
                 display: flex
                 flex-direction: column
-                gap: 10px
+                gap: 20px
                 padding-top: 15px
+
+                @include desktop-small
+                    gap: 15px
+                @include tablet
+                    gap: 10px
 
                 li
                     font-size: calc(7px + 1vw)
                     line-height: 20px
+
+                    @include tablet
+                    font-size: calc(7px + 1.5vw)
 
                     @include mobile-big
                         font-size: calc(7px + 2vw)
@@ -190,11 +205,9 @@
         .products__item:nth-child(7)
             img
                 display: none
-                @include tablet
+                @include mobile-big
 
                     display: flex
-
-                
 
         .products__item:nth-child(8)
             @include desktop-small
