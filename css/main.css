@@ -1357,7 +1357,11 @@ h2 {
 .products .products__items .products__item ul li {
   font-size: calc(7px + 1vw);
   line-height: 20px;
-  font-size: calc(7px + 1.5vw);
+}
+@media (max-width: 768px) {
+  .products .products__items .products__item ul li {
+    font-size: calc(7px + 1.5vw);
+  }
 }
 @media (max-width: 576px) {
   .products .products__items .products__item ul li {
