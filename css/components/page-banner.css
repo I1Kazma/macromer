@@ -260,6 +260,12 @@
     font-size: 36px;
   }
 }
+.page-banner .page-banner__title .page-banner__title__layout .page-banner__button {
+  border-radius: 10px;
+  background-color: #00a0df;
+  border: none;
+  padding: 10px 20px;
+}
 .page-banner .page-banner__title .page-banner__title__layout .rectangle-wrapper {
   margin-left: 35px;
 }
