@@ -1,0 +1,40 @@
+.our-products
+    margin: 0px 20px
+    display: flex
+
+    .our-products__wrapper
+        max-width: 1600px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 90px
+
+        h2
+            font-size: 70px
+            font-weight: 700
+            letter-spacing: -3px
+
+            @media (max-width: 1200px)
+                font-size: 68px
+
+            @media (max-width: 640px)
+                font-size: 63px
+
+        .our-products__items
+            display: grid
+            grid-template-columns: repeat(4, minmax(100px, 184px))
+            gap: 30px
+
+            @include desktop-small
+                display: grid
+                grid-template-columns: repeat(2, minmax(100px, 244px))
+
+            @include mobile-big
+                grid-template-columns: repeat(2, minmax(100px, 184px))
+
+            .our-products__item
+                align-items: baseline
+                display: flex
+                flex-direction: column
+                gap: 10px

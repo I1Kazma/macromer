@@ -5,6 +5,22 @@
     padding: 0px 20px
     overflow: hidden
 
+    .zvezdochka
+
+        @include desktop-small
+            display: none
+        img
+            width: 56px
+            height: 56px
+
+    .zvezdochka-right
+        right: 30px
+        top: 0px
+
+    .zvezdochka-left
+        bottom: 0px
+        left: 30px
+
     .how-to-buy__background
         position: absolute
         z-index: 0
@@ -17,7 +33,7 @@
             justify-content: end
 
             @include tablet
-            text-align: start
+                text-align: start
 
         @media (max-width: 1025px)
             top: -60px

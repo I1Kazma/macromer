@@ -180,6 +180,28 @@
                 @media (max-width: 350px)
                     font-size: 36px
 
+            .page-banner__links
+                display: flex
+                gap: 30px
+                justify-content: flex-end
+                width: 100%
+                flex-wrap: wrap
+
+                @include desktop-small
+                    display: flex
+                    gap: 30px
+                    justify-content: flex-start
+
+                li
+
+                    a
+                        max-width: none
+                        width: 100%
+                        font-size: calc(2px + 1vw)
+
+                        @include desktop-small
+                            font-size: calc(10px + 1vw)
+
             .page-banner__button
                 border-radius: 10px
                 background-color: $blue

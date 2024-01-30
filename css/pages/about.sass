@@ -1,0 +1,80 @@
+.about
+
+    .main
+        gap: 100px
+
+    .page-banner
+        padding: 0px 20px
+        margin: 0px
+        height: auto
+        width: 100%
+
+        .page-banner__title
+            width: 100%
+
+            h1
+                font-size: calc(2em + 3vw)
+                line-height: 130% !important
+                letter-spacing: -4px
+
+                @include desktop-small
+                    font-size: calc(3em + 3vw) !important
+
+                @include tablet
+                    font-size: calc(3em + 2vw) !important
+
+                @include mobile-big
+                    font-size: 70px !important
+                    line-height: 135%
+                    letter-spacing: -3px
+
+                @include mobile
+                    font-size: 60px !important
+
+            .page-banner__title__layout
+                display: flex
+                flex-direction: column
+                align-items: flex-start !important
+                gap: 30px
+
+    .page-content
+
+        .page-content__table
+            width: 1160px
+
+            @media (max-width 1250px)
+                width: 920px
+
+            @include desktop-small
+                width: 750px
+
+            @include tablet
+                width: 550px
+
+            @include mobile-big
+                width: 360px
+
+            @include mobile
+                width: 300px
+
+            .page-content__table__table
+                border-collapse: collapse
+
+            &__th
+                background: #ffffff
+                border: 1px solid $blue
+                border-collapse: collapse
+                color: $blue
+                padding: 20px
+
+            &__td
+                border: 1px solid $blue
+                vertical-align: top
+                color: #181b22
+                padding: 20px
+                font-size: 18px
+                font-weight: 400
+                font-family: 'Manrope'
+
+            &__oddrow
+                background: #f3f3f3
