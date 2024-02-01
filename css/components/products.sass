@@ -8,6 +8,9 @@
     position: relative
     overflow: hidden
 
+    @include desktop-small
+        padding-top: 100px
+
     .products__heading
         display: flex
         gap: 30px
@@ -110,7 +113,7 @@
                 transition: 1.2s
 
                 &._anim-items
-                    left:-80px
+                    left: -80px
 
                 &._active
                     left: 0px
@@ -139,6 +142,9 @@
             justify-content: space-between
             padding: 30px
 
+            @media (max-width: 1300px)
+                padding: 20px
+
             @include tablet
                 grid-area: auto !important
                 gap: 20px
@@ -149,17 +155,18 @@
             ul
                 display: flex
                 flex-direction: column
-                gap: 20px
+                gap: 10px
                 padding-top: 15px
-
-                @include desktop-small
-                    gap: 15px
-                @include tablet
-                    gap: 10px
 
                 li
                     font-size: calc(7px + 1vw)
                     line-height: 24px
+
+                    @media (max-width: 1300px)
+                        font-size: calc(4px + 1vw)
+
+                    @include desktop-small
+                        font-size: calc(8px + 1vw)
 
                     @include tablet
                         font-size: calc(7px + 1.5vw)
@@ -174,9 +181,9 @@
             @include desktop-small
                 position: absolute
                 max-width: 450px
-                right: -50px
+                right: -118px
                 background: transparent
-                top: -109px
+                top: 4px
                 z-index: -1
 
             @include tablet
@@ -185,7 +192,13 @@
 
             span
                 @include desktop-small
-                    line-height: 0.8
+                    line-height: 98px
+
+                @include tablet
+                    line-height: 125px
+
+                @include tablet
+                    line-height: 90px
         .products__item:nth-child(1)
             @include desktop-small
                 grid-area: 1/1/2/3

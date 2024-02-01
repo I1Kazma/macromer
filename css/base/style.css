@@ -156,6 +156,11 @@ h2 {
   color: #00a0df;
 }
 
+.blue-active {
+  background: white !important;
+  color: #00a0df !important;
+}
+
 .rectangle-wrapper {
   padding-top: 10px;
   width: 115px;
@@ -167,7 +172,7 @@ h2 {
 }
 .rectangle-wrapper .rectangle {
   background: #00a0df;
-  height: 7px;
+  height: 10px;
   animation-duration: 2s;
   animation-name: el-width;
   max-width: 115px;

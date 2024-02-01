@@ -14,21 +14,21 @@ menu__close.addEventListener("click", () => {
 
 const header = document.querySelector(".header__layout");
 window.addEventListener("scroll", function () {
-  header.classList.toggle("sticky", window.scrollY > 30);
+    header.classList.toggle("sticky", window.scrollY > 30);
 });
 
 function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add('opacity-show');
-    }
-  });
+    entry.forEach(change => {
+        if (change.isIntersecting) {
+            change.target.classList.add('opacity-show');
+        }
+    });
 }
 let options = { threshold: [0.5] };
 let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll('.opacity-anim');
 for (let elm of elements) {
-  observer.observe(elm);
+    observer.observe(elm);
 }
 
 const animItems = document.querySelectorAll(`._anim-items`)

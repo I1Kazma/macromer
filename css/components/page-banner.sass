@@ -2,23 +2,26 @@
 .page-banner
     position: relative
 
-    height: 820px
+    min-height: 700px
     overflow: hidden
     display: flex
     align-items: flex-end
     margin: -70px 20px 0px
 
+    @media (max-width: 1450px)
+        min-height: 700px
+
     @include desktop-small
-        height: 620px
+        min-height: 620px
 
     @include tablet
-        height: 670px
+        min-height: 670px
 
     @include mobile-big
-        height: 545px
+        min-height: 545px
 
     @include mobile
-        height: 515px
+        min-height: 515px
 
     .page-banner__background
         position: absolute
@@ -165,6 +168,7 @@
                 font-weight: 700
                 min-width: 778px
                 position: relative
+                font-size: 84px
 
                 @include desktop-small
                     min-width: auto
@@ -182,14 +186,14 @@
 
             .page-banner__links
                 display: flex
-                gap: 30px
+                gap: 10px
                 justify-content: flex-end
                 width: 100%
                 flex-wrap: wrap
 
                 @include desktop-small
                     display: flex
-                    gap: 30px
+                    gap: 20px
                     justify-content: flex-start
 
                 li

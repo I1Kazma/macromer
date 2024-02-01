@@ -1,5 +1,3 @@
-@import '../utils/utils'
-@import '../base/style'
 
 .header
     position: relative
@@ -27,7 +25,7 @@
         width: 100%
         top: 0px
         left: 0px
-        padding: 20px 20px 
+        padding: 20px 20px
         transition: 0.3s ease
 
         @include desktop-small
@@ -35,7 +33,7 @@
             z-index: 2
 
         .header__layout__left
-       
+
             display: Flex
             align-items: center
 
@@ -48,16 +46,14 @@
                     img
                         max-width: 160px
 
-       
         .menu--open
             left: 0px !important
 
         .header__layout__right
-            gap:60px
+            gap: 60px
             display: Flex
             justify-content: space-between
             align-items: center
-            
 
             @include desktop-small
                 position: absolute
@@ -65,12 +61,12 @@
                 justify-content: flex-start
                 background: white
                 z-index: 1
-                top:0px
+                top: 0px
                 height: 100vh
                 left: -1000px
                 width: 100%
                 align-items: baseline
-                padding: 30px 
+                padding: 30px
                 transition: 0.3s ease
 
             .header__logo
@@ -81,7 +77,6 @@
                 a
                     img
                         max-width: 160px
-                        
 
             .menu-close
                 display: none
@@ -90,21 +85,17 @@
                 @include desktop-small
                     display: flex
                     position: absolute
-                    right:20px 
+                    right: 20px
                     top: 20px
 
                 a
                     svg
                         g
-                            transition:0.3s ease
+                        transition: 0.3s ease
 
                     &:hover
                         g
-                            fill: black
-
-
-
-
+                        fill: black
 
             .header__links
                 display: flex
@@ -119,27 +110,26 @@
                         position: relative
                         color: $blue
                         cursor: pointer
-                        line-height: 1 
-                        text-decoration: none 
+                        line-height: 1
+                        text-decoration: none
                         font-size: 21px
                         line-height: 1.35
                         font-weight: 700
 
-                        &:after 
+                        &:after
                             display: block
                             position: absolute
-                            left: 0 
+                            left: 0
                             width: 0
-                            height: 2px 
+                            height: 2px
                             background-color: $blue
                             content: ""
                             transition: width 0.3s ease-out
-                        
 
                         &:hover:after,
-                        &:focus:after 
+                        &:focus:after
                             width: 100%
-                        
+
             .header__phone
                 display: Flex
 
@@ -163,33 +153,28 @@
             flex-direction: column
             justify-content: center
             align-items: center
-            gap:4px
-            background:$blue
-            border-radius:20px
+            gap: 4px
+            background: $blue
+            border-radius: 20px
             transition: 0.3s ease
-            padding:12px
+            padding: 12px
             cursor: pointer
             border: 1px solid $blue
 
             @include desktop-small
                 display: flex
-                
-            @include tablet 
+
+            @include tablet
                 padding: 10px
 
             &:hover
                 background: white
-                
 
                 span
                     background: $blue
 
-
             span
                 transition: 0.3s ease
-                width:17px
-                height:3px
+                width: 17px
+                height: 3px
                 background: $white
-
-
-
