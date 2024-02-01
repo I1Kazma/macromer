@@ -1,0 +1,52 @@
+.industrial-park {
+  margin: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.industrial-park .industrial-park__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  gap: 100px;
+}
+.industrial-park .industrial-park__wrapper .industrial-park__content span {
+  font-weight: 600;
+  max-width: 36%;
+  width: 100%;
+  font-size: calc(13px + 1vw);
+  text-align: left;
+  display: flex;
+  line-height: 38px;
+}
+.industrial-park .industrial-park__wrapper .industrial-park__text {
+  position: relative;
+  max-width: 26%;
+}
+.industrial-park .industrial-park__wrapper .industrial-park__text .zvezdochka {
+  left: -40%;
+  top: 25px;
+}
+.industrial-park .industrial-park__wrapper .industrial-park__text .zvezdochka img {
+  width: 55px;
+  height: 55px;
+}
+.industrial-park .industrial-park__wrapper .industrial-park__text span {
+  font-size: calc(12px + 0.5vw);
+}
+.industrial-park .industrial-park__wrapper .industrial-park__year {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -182px;
+}
+.industrial-park .industrial-park__wrapper .industrial-park__year span {
+  color: #f3f3f3;
+  font-size: calc(5em + 10vw);
+  font-weight: 700;
+  letter-spacing: -11px;
+  text-align: end;
+  width: 100%;
+}/*# sourceMappingURL=industrial-park.css.map */

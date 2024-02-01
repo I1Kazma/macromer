@@ -17,6 +17,11 @@ window.addEventListener("scroll", function () {
     header.classList.toggle("sticky", window.scrollY > 30);
 });
 
+const btn_to_top = document.querySelector("#btn_to_top");
+window.addEventListener("scroll", function () {
+    btn_to_top.classList.toggle("btn-to-top--visible", window.scrollY > 200);
+});
+
 function onEntry(entry) {
     entry.forEach(change => {
         if (change.isIntersecting) {

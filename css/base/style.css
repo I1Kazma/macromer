@@ -202,4 +202,33 @@ h2 {
 ._anim-items {
   opacity: 0;
   transition: opacity 1s;
+}
+
+.btn-to-top--visible {
+  opacity: 1 !important;
+}
+
+.btn-to-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  border-radius: 60px;
+  z-index: 3;
+  opacity: 0;
+  transition: 0.3s ease;
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: transparent;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-to-top svg rect, .btn-to-top svg path {
+  transition: 0.3s ease;
+}
+.btn-to-top:hover rect {
+  fill: #00a0df;
+  fill-opacity: 1;
+}
+.btn-to-top:hover path {
+  stroke: white;
 }/*# sourceMappingURL=style.css.map */
