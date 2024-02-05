@@ -3,6 +3,12 @@
     .main
         gap: 100px
 
+        @include desktop-small
+            gap: 70px
+
+        @include mobile-big
+            gap: 50px
+
     .page-banner
         padding: 0px 20px
         margin: 0px
@@ -68,6 +74,7 @@
 
             overflow: hidden
             gap: 50px
+
         .page-content__table
             width: 1160px
 

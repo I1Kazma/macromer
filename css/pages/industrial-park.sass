@@ -38,6 +38,8 @@
                     line-height: 33px
                     font-size: calc(22px + 1vw)
 
+        .industrial-park__content.opacity-anim
+            transition-delay: 0.3s
         .industrial-park__text
             position: relative
             max-width: 26%
@@ -73,7 +75,8 @@
                 @include desktop-small
                     font-size: calc(18px + 0.5vw)
                     line-height: 30px
-
+        .industrial-park__text.opacity-anim
+            transition-delay: 0.6s
         .industrial-park__year
             width: 100%
             display: flex
@@ -97,7 +100,8 @@
 
                 @include mobile-big
                     font-size: calc(3em + 34vw)
-
+        .industrial-park__year.opacity-anim
+            transition-delay: 0.9s
 .industrial-park-info
     display: flex
     justify-content: center
@@ -243,11 +247,12 @@
             width: 100%
 
             .blue-button
-                max-width: 352px
+                max-width: 600px
                 display: flex
                 justify-content: center
                 justify-content: center
                 height: 32px
+                width: auto
                 align-items: center
                 font-size: calc(4px + 1vw)
 
