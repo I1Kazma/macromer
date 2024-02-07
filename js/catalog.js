@@ -52,8 +52,6 @@ function toggleDropdown(id) {
     if (submenu.classList.contains('catalog__filter__checkboxes__items--open')) {
         submenu.classList.remove("catalog__filter__checkboxes__items--open");
 
-
-
     } else {
         submenu.classList.toggle("catalog__filter__checkboxes__items--open");
 

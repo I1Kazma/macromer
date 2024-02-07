@@ -9,56 +9,57 @@
         @include mobile-big
             gap: 50px
 
-    .page-banner
-        padding: 0px 20px
-        margin: 0px
-        min-height: 230px
-        width: 100%
-        height: auto
-
-        @include desktop-small
-            min-height: 283px
-
-        @include mobile-big
-            min-height: 382px
-
-        .page-banner__title
+        .page-banner
+            padding: 0px 20px
+            margin: 0px
+            min-height: 230px
             width: 100%
+            height: auto
+            overflow: visible
 
-            h1
-                font-size: calc(3em + 2vw) !important
-                line-height: 130% !important
-                letter-spacing: -4px
+            @include desktop-small
+                min-height: auto
 
-                @include desktop-small
-                    font-size: calc(3em + 2vw) !important
+            .page-banner__title
+                width: 100%
 
-                @include tablet
-                    font-size: calc(3em + 1vw) !important
+                h1
+                    font-size: calc(1em + 6vw)
+                    line-height: 130% !important
+                    letter-spacing: -4px
 
-                @include mobile-big
+                    @include desktop-small
+                        font-size: calc(1em + 6vw)
 
-                    line-height: 135%
-                    letter-spacing: -3px
-
-                @include mobile
-
-            .page-banner__title__layout
-                display: flex
-                flex-direction: column
-                align-items: flex-start !important
-                gap: 30px
-                position: relative
-
-                .zvezdochka
-                    right: 30px
-                    top: 30px
-                    img
-                        width: 30px
-                        height: 30px
+                    @include tablet
+                        font-size: calc(1em + 5vw)
 
                     @include mobile-big
-                        display: none
+                        font-size: calc(1em + 7vw)
+                        line-height: 135%
+                        letter-spacing: -3px
+
+                    @include mobile
+
+                .page-banner__title__layout
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start !important
+                    gap: 30px
+                    position: relative
+
+                    .zvezdochka
+                        right: 30px
+                        top: 30px
+                        img
+                            width: 30px
+                            height: 30px
+
+                        @media (max-width: 450px)
+                            top: auto
+                            right: auto
+                            bottom: -40px
+                            left: 0px
 
     .page-content
         display: flex

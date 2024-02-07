@@ -3,7 +3,6 @@
     min-height: 503px
     width: 100%
     padding: 0px 20px
-    overflow: hidden
 
     .zvezdochka
 
@@ -39,12 +38,10 @@
             top: -60px
 
         @include tablet
-            top: 0px
-
-        @include mobile-big
             top: auto
             bottom: 0px
-            top: auto
+
+        @include mobile-big
 
         span
             font-size: calc(7em + 8vw)
@@ -52,16 +49,17 @@
             color: $grey
 
             @include desktop-small
-                font-size: calc(6em + 8vw)
+                font-size: calc(1em + 21vw)
+                text-align: left
 
             @include tablet
-                font-size: calc(4em + 8vw)
+                font-size: calc(1em + 20vw)
 
             @include mobile-big
-                font-size: calc(2.5em + 8vw)
+                font-size: calc(1em + 19vw)
 
             @include mobile
-                font-size: calc(2em + 8vw)
+                font-size: calc(1em + 18vw)
 
     &__content
 

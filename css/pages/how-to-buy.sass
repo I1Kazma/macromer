@@ -3,7 +3,7 @@
     .page-banner
 
         @include desktop-small
-            height: 100px !important
+            height: 150px !important
 
         h1
             font-size: 100px
@@ -35,8 +35,8 @@
 
     .page-banner
         position: relative
-        height: 210px
         overflow: hidden
+        min-height: auto
         width: 100%
         display: flex
         align-items: flex-end
@@ -66,7 +66,10 @@
         gap: 50px !important
 
         h1
-            font-size: 130px
+            font-size: calc(1px + 9vw) !important
             font-weight: 700
             line-height: 56px
             letter-spacing: -5px
+
+            @include desktop-small
+                font-size: calc(1px + 12vw) !important

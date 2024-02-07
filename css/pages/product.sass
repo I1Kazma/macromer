@@ -1,0 +1,43 @@
+.product-page
+    .page-banner
+        max-width: 1968px
+        width: 98%
+
+        @include desktop-small
+            width: auto
+
+        @include tablet
+            min-height: 550px
+            width: 95%
+
+        @include mobile-big
+            min-height: 450px
+
+        @include mobile
+            min-height: 400px
+
+        .page-banner__icon
+            @include mobile-big
+                left: 8%
+                bottom: 210px
+                max-width: 25px
+
+        .page-banner__background
+            position: absolute
+            display: flex
+            flex-direction: column
+            width: 100%
+            z-index: -1
+            top: 0px
+
+        .page-banner__title
+            width: 100%
+
+            .page-banner__title__layout
+                justify-content: space-between
+
+                @media (max-width: 1250px)
+                    align-items: center
+                @include tablet
+                    gap: 50px
+                    align-items: flex-start

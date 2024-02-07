@@ -5,6 +5,49 @@
     justify-content: center
     align-items: center
     width: 100%
+    position: relative
+
+    .zvezdochka
+        width: 55px
+        bottom: 0px
+        left: 7%
+
+        @include desktop-small
+            width: 35px
+            bottom: -77px
+            left: 2%
+
+        @include tablet
+            left: auto
+            right: 20px
+            bottom: 20px
+
+        @include mobile-big
+            right: 20px
+            bottom: 70px
+
+        img
+            width: 55px
+
+            @include desktop-small
+                width: 35px
+
+    .half-circle
+        width: 55px
+        right: 90px
+        top: 222px
+        position: absolute
+
+        @include desktop-small
+            right: 0px
+            top: -50px
+
+        img
+            width: 55px
+            transform: rotate(270deg)
+
+            @include desktop-small
+                width: 35px
 
     .our-mission__wrapper
         padding: 40px
@@ -41,13 +84,17 @@
     .our-mission__text
         max-width: 50%
         font-weight: 600
-        font-size: calc(13px + 1vw)
+        font-size: calc(1px + 2vw)
 
         @include desktop-small
             max-width: 90%
+            font-size: calc(1px + 3vw)
+
+        @include tablet
+            max-width: 93%
 
         @include mobile-big
-            font-size: calc(13px + 2vw)
+            font-size: calc(1px + 4vw)
 
 .vision
     display: flex
@@ -91,7 +138,7 @@
         font-size: calc(13px + 1vw)
 
         @include mobile-big
-            font-size: calc(13px + 2vw)
+            font-size: calc(1px + 4vw)
 
 .values
     display: flex
@@ -174,7 +221,7 @@
                     font-size: calc(8px + 1vw)
                     font-weight: 600
                     @include tablet
-                        font-size: calc(8px + 3vw)
+                        font-size: calc(1px + 4vw)
 
                 img
                     position: absolute
@@ -275,6 +322,6 @@
                     @include mobile-big
                         width: 100%
 
-            .value__item-1,   .value__item-2,   .value__item-3,   .value__item-4,   .value__item-5,   .value__item-6,   .value__item-7
-                opacity: 0
-                transition: 0.3s ease
+.value__item-1,   .value__item-2,   .value__item-3,   .value__item-4,   .value__item-5,   .value__item-6,   .value__item-7
+    opacity: 0
+    transition: 0.3s ease
