@@ -167,21 +167,14 @@
                 font-weight: 700
                 min-width: 778px
                 position: relative
-                font-size: 84px
+                font-size: calc(1em + 6vw)
 
                 @include desktop-small
                     min-width: auto
-                    font-size: 60px
 
                 @include mobile-big
-                    font-size: 50px
 
                 @include mobile
-                    font-size: 39px
-                    line-height: 44px
-
-                @media (max-width: 350px)
-                    font-size: 36px
 
             .page-banner__links
                 display: flex

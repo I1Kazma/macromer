@@ -6,7 +6,7 @@
 }
 .catalog-page .page-banner {
   position: relative;
-  min-height: 400px;
+  min-height: auto;
   overflow: hidden;
   width: 100%;
   display: flex;
