@@ -357,12 +357,18 @@ h2 {
   min-height: auto;
   overflow: hidden;
   width: 100%;
+  min-height: 400px;
   display: flex;
   align-items: flex-end;
   background: #f8f9fd;
   justify-content: center;
   margin: 0px 20px;
   padding: 0px 20px;
+}
+@media (max-width: 992px) {
+  .catalog-page .page-banner {
+    min-height: auto;
+  }
 }
 @media (max-width: 768px) {
   .catalog-page .page-banner {

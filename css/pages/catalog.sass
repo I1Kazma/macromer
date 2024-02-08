@@ -11,12 +11,16 @@
         min-height: auto
         overflow: hidden
         width: 100%
+        min-height: 400px
         display: flex
         align-items: flex-end
         background: #f8f9fd
         justify-content: center
         margin: 0px 20px
         padding: 0px 20px
+
+        @include desktop-small
+            min-height: auto
 
         @include tablet
             font-size: calc(1em + 8vw) !important
