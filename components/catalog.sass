@@ -1,0 +1,501 @@
+.catalog__filter__checkboxes__items--open
+    max-height: 300px !important
+    overflow: auto !important
+    padding: 10px 0px
+
+.catalog__submenu--open
+    height: 100% !important
+    max-height: none !important
+
+.catalog__item__more__popup--open
+    z-index: 3 !important
+    opacity: 1 !important
+
+.catalog
+    background: #f8f9fd
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+
+    .catalog__wrapper
+        display: flex
+        flex-direction: column
+        gap: 20px
+        width: 100%
+        max-width: 1160px
+        margin: 55px 20px
+
+        @media (max-width: 1200px)
+            max-width: 920px
+
+        @media (max-width: 960px)
+            max-width: 620px
+
+        .catalog__heading
+            display: flex
+            justify-content: flex-end
+            gap: 20px
+
+            @media (max-width: 960px)
+                display: none
+
+            .catalog__heading__search
+                display: flex
+                align-items: center
+                position: relative
+
+                svg
+                    position: absolute
+                    top: 0
+                    bottom: 0
+                    margin: auto
+                    right: 0
+                    width: 29px
+                    height: 100%
+                    padding-left: 7px
+                    padding-right: 8px
+                    border-left: 1px solid #ddd
+                    cursor: pointer
+                    display: flex
+                    align-items: center
+                    justify-content: center
+
+            input, select
+                border: 1px #ddd solid
+                color: #000
+                padding: 2px 30px 2px 10px
+                border-radius: 3px
+                outline: none
+                font-size: 14px
+                @media (max-width: 1200px)
+                    font-size: 12px
+
+        .catalog__layout
+            display: flex
+            gap: 30px
+
+            @media (max-width: 960px)
+                flex-direction: column
+
+            .catalog__heading-mobile__padding
+                padding-bottom: 80px
+
+            .catalog__heading-mobile
+                display: none
+                position: relative
+                transition: 0.3s ease
+
+                @media (max-width: 960px)
+                    display: flex
+                    justify-content: space-between
+
+                .catalog__heading-mobile__filters
+                    display: flex
+                    gap: 10px
+                    cursor: pointer
+                    flex-direction: column
+                    .catalog__heading-mobile__filters__title
+                        display: flex
+                        gap: 10px
+                        cursor: pointer
+                        svg
+                            width: 11px
+                            height: 17px
+
+                    .catalog__heading-mobile__filters__items
+                        max-height: 0px
+                        height: 100%
+                        overflow: hidden
+                        transition: 0.3s ease
+
+                        display: flex
+                        flex-direction: column
+
+                    .catalog__filter__checkboxes__items
+                        display: flex
+                        flex-direction: column
+                        transition: 0.3s ease
+                        border-top: 1px solid #00a0df
+                        border-bottom: 1px solid #00a0df
+                        margin: -1px 0px 0px
+
+                        h3
+                            font-size: 14px
+                            font-weight: 500
+
+                            @media (max-width: 960px)
+                                padding: 10px 0px
+
+                        a
+                            text-decoration: underline
+                            &:hover
+                                color: $blue-hover
+
+                        .catalog__filter__items
+                            display: flex
+                            flex-direction: column
+                            gap: 10px
+                            transition: 0.3s ease
+                            max-height: 0px
+                            overflow: hidden
+
+                        .catalog__filter__checkboxes__item
+                            position: relative
+
+                            input
+                                opacity: 0
+                                position: absolute
+                                width: 100%
+                                height: 100%
+
+                                &:checked + .catalog__filter__checkbox-indicator
+                                    background-image: url(../img/checkbox.png)
+                                    background-position: center
+                                    background-size: cover
+                                    opacity: 1
+
+                            .catalog__filter__checkbox-indicator
+                                position: relative
+                                display: inline-block
+                                vertical-align: middle
+                                height: 20px
+                                width: 20px
+                                border: 2px solid $blue
+                                box-sizing: border-box
+                                margin-right: 10px
+                                -webkit-transition: all 0.2s
+                                transition: all 0.2s
+                                opacity: .6
+                                cursor: pointer
+
+                            label
+                                color: $blue
+                                cursor: pointer
+                                font-size: 14px
+                                transition: 0.3s ease
+
+                .catalog__heading-mobile__search
+                    cursor: pointer
+                    display: flex
+                    justify-content: flex-end
+                    svg
+                        width: 16px
+                        height: 16px
+
+                        path
+                            fill: $blue
+
+                    .catalog__search--open
+                        max-height: 100px !important
+                        overflow: auto !important
+
+                    .catalog__heading-mobile__search__input
+                        position: absolute
+                        width: 100%
+                        top: 50px
+
+                        .catalog__heading-mobile__search__input__wrapper
+                            position: relative
+                            max-height: 0px
+                            overflow: hidden
+                            transition: 0.3s ease
+                        input
+                            width: 100%
+                            border: 1px #ddd solid
+                            background: #f8f8f8
+                            color: #000
+                            box-sizing: border-box
+                            padding: 0 6px
+                            -webkit-appearance: none
+                            -moz-appearance: none
+                            appearance: none
+                            font-size: inherit
+                            font-family: inherit
+                            font-weight: inherit
+                            line-height: 1.8
+                            min-height: 24px
+                            outline: none
+
+                        svg
+                            position: absolute
+                            top: 0
+                            bottom: 0
+                            margin: auto
+                            right: 0
+                            width: 29px
+                            height: 100%
+                            padding-left: 7px
+                            padding-right: 8px
+                            border-left: 1px solid #ddd
+                            cursor: pointer
+                            display: flex
+                            align-items: center
+                            justify-content: center
+
+            .catalog__filter
+                display: flex
+                flex-direction: column
+                gap: 20px
+                max-width: 250px
+                position: relative
+
+                @media (max-width: 960px)
+                    flex-direction: row
+                    max-width: none
+                    position: static
+
+                .catalog__filter__items
+                    display: flex
+                    flex-direction: column
+                    gap: 10px
+
+                    @media (max-width: 960px)
+                        flex-direction: row
+                        flex-wrap: wrap
+                        justify-content: center
+
+                    .catalog__filter__item
+                        color: $blue
+                        cursor: pointer
+                        transition: 0.3s ease
+                        font-size: 12px
+
+                        &:hover
+                            color: $blue-hover
+
+                        &:active
+                            opacity: .7
+
+                .catalog__filter__checkboxes__items
+                    display: flex
+                    flex-direction: column
+                    gap: 10px
+                    @media (max-width: 960px)
+                        display: none
+
+                    h3
+                        font-size: 14px
+                        font-weight: 500
+
+                    a
+                        text-decoration: underline
+                        &:hover
+                            color: $blue-hover
+
+                    .catalog__filter__checkboxes__item
+                        position: relative
+
+                        input
+                            opacity: 0
+                            position: absolute
+                            width: 100%
+                            height: 100%
+
+                            &:checked + .catalog__filter__checkbox-indicator
+                                background-image: url(../img/checkbox.png)
+                                background-position: center
+                                background-size: cover
+                                opacity: 1
+
+                        .catalog__filter__checkbox-indicator
+                            position: relative
+                            display: inline-block
+                            vertical-align: middle
+                            height: 20px
+                            width: 20px
+                            border: 2px solid $blue
+                            box-sizing: border-box
+                            margin-right: 10px
+                            -webkit-transition: all 0.2s
+                            transition: all 0.2s
+                            opacity: .6
+                            cursor: pointer
+
+                        label
+                            color: $blue
+                            cursor: pointer
+                            font-size: 14px
+                            transition: 0.3s ease
+
+            .catalog__items
+
+                display: grid
+                grid-template-columns: repeat(auto-fit, minmax(153px, auto))
+                column-gap: 30px
+                row-gap: 200px
+                justify-content: space-between
+                width: 100%
+
+                @media (max-width: 1200px)
+                    grid-template-columns: repeat(auto-fit, minmax(137px, auto))
+
+                @media (max-width: 960px)
+                    grid-template-columns: repeat(auto-fit, minmax(187px, auto))
+                    row-gap: 60px
+
+                @include mobile-big
+                    grid-template-columns: repeat(auto-fit, minmax(153px, auto))
+
+                @media (max-width: 400px)
+                    grid-template-columns: repeat(auto-fit, minmax(113px, auto))
+
+                .catalog__item
+                    display: flex
+                    flex-direction: column
+                    height: 100%
+                    justify-content: space-between
+                    gap: 20px
+
+                    .catalog__item__content
+                        display: flex
+                        flex-direction: column
+                        gap: 10px
+
+                        h4
+                            font-size: 19px
+                            font-weight: 700
+
+                        span
+                            font-size: 12px
+                            font-weight: 500
+                            line-height: 19px
+
+                    .catalog__item__more
+                        font-size: 14px
+                        background: $blue
+                        border: 2px solid $blue
+                        color: $white
+                        transition: 0.3s ease
+                        padding: 2px 15px
+                        border-radius: 60px
+                        cursor: pointer
+                        max-width: 105px
+                        height: 35px
+
+                        display: flex
+                        justify-content: center
+                        align-items: center
+
+                        &:hover
+                            background: $white
+                            color: $blue
+
+                    .catalog__item__more__popup
+                        position: fixed
+                        inset: 0
+                        background-color: rgb(59, 59, 59)
+                        z-index: -1
+                        width: 100%
+                        height: 100%
+                        transition: 0.3s ease
+                        opacity: 0
+
+                        .catalog__item__more__popup__wrapper
+                            position: relative
+                            display: flex
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+                            height: 100%
+
+                            .catalog__item__more__popup__back
+                                position: absolute
+                                left: 20px
+                                top: 20px
+                                cursor: pointer
+                                color: $blue
+
+                            .catalog__item__more__popup__close
+
+                                position: absolute
+                                right: 20px
+                                top: 20px
+                                cursor: pointer
+
+                            .catalog__item__more__popup__content
+                                display: flex
+                                max-width: 620px
+                                background: white
+                                padding: 40px
+                                overflow: auto
+
+                                flex-direction: column
+                                gap: 40px
+
+                                h2
+                                    font-size: 24px
+                                    line-height: 1.35
+
+                                    @media (max-width: 1200px)
+                                        font-size: 22px
+
+                                    @media (max-width: 640px)
+                                        font-size: 20px
+
+                                span
+                                    font-size: 16px
+                                    line-height: 30px
+
+                                h2 + span
+
+                                    color: rgb(153,153,153)
+
+                                    a
+                                        color: rgb(153,153,153)
+                                        text-decoration: underline
+
+                                ul
+                                    li
+                                        font-size: 14px
+                                        color: $blue
+
+                                        @media (max-width: 1200px)
+                                            font-size: 12px
+
+                                .accordion
+                                    display: flex
+                                    flex-direction: column
+
+                                    .accordion__item
+                                        margin: -1px 0px 0px
+                                        padding: 20px 0px
+                                        border-top: 1px solid $blue
+                                        border-bottom: 1px solid $blue
+
+                                        .accordion__header
+                                            display: flex
+                                            justify-content: space-between
+                                            align-items: center
+                                            color: #24282D
+                                            font-weight: 500
+                                            border-radius: 8px
+                                            cursor: pointer
+                                            transition: background-color 0.2s ease-out
+
+                                        .accordion__content
+                                            padding: 20px 0px
+                                            font-size: 15px
+                                            font-weight: 400
+                                            line-height: 150%
+                                            color: #3F4B5B
+
+                                            img
+                                                width: 100%
+
+                                    .accordion__item:not(.accordion__item_show) .accordion__body
+                                        display: none
+
+                                        flex-direction: column
+                                        justify-content: center
+                                        align-items: center
+
+                                .accordion__item_slidedown .plus,.accordion__item_show  .plus
+                                    transform: rotate(45deg)
+
+                                .accordion__item_show .accordion__header::after,
+                                .accordion__item_slidedown .accordion__header::after
+                                    transform: rotate(-180deg)
+
+                                .plus
+                                    transition: 0.3s ease

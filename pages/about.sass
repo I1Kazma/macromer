@@ -1,0 +1,117 @@
+.about
+
+    .main
+        gap: 100px
+
+        @include desktop-small
+            gap: 70px
+
+        @include mobile-big
+            gap: 50px
+
+        .page-banner
+            padding: 0px 20px
+            margin: 0px
+            min-height: 230px
+            width: 100%
+            height: auto
+            overflow: visible
+
+            @include desktop-small
+                min-height: auto
+
+            .page-banner__title
+                width: 100%
+
+                h1
+                    font-size: calc(1em + 6vw)
+                    line-height: 130% !important
+                    letter-spacing: -4px
+
+                    @include desktop-small
+                        font-size: calc(1em + 6vw)
+
+                    @include tablet
+                        font-size: calc(1em + 5vw)
+
+                    @include mobile-big
+                        font-size: calc(1em + 7vw)
+                        line-height: 135%
+                        letter-spacing: -3px
+
+                    @include mobile
+
+                .page-banner__title__layout
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start !important
+                    gap: 30px
+                    position: relative
+
+                    .zvezdochka
+                        right: 30px
+                        top: 30px
+                        img
+                            width: 30px
+                            height: 30px
+
+                        @media (max-width: 450px)
+                            top: auto
+                            right: auto
+                            bottom: -40px
+                            left: 0px
+
+    .page-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 200px
+        width: 100%
+
+        @include desktop-small
+            gap: 100px
+
+        @include mobile-big
+
+            overflow: hidden
+            gap: 50px
+
+        .page-content__table
+            width: 1160px
+
+            @media (max-width 1250px)
+                width: 920px
+
+            @include desktop-small
+                width: 750px
+
+            @include tablet
+                width: 550px
+
+            @include mobile-big
+                width: 360px
+
+            @include mobile
+                width: 300px
+
+            .page-content__table__table
+                border-collapse: collapse
+
+            &__th
+                background: #ffffff
+                border: 1px solid $blue
+                border-collapse: collapse
+                color: $blue
+                padding: 20px
+
+            &__td
+                border: 1px solid $blue
+                vertical-align: top
+                color: #181b22
+                padding: 20px
+                font-size: 18px
+                font-weight: 400
+                font-family: 'Manrope'
+
+            &__oddrow
+                background: #f3f3f3

@@ -1,0 +1,269 @@
+.industrial-park
+    margin: 0px 20px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+    .industrial-park__wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        max-width: 90%
+        gap: 100px
+
+        @include desktop-small
+            max-width: 100%
+            gap: 50px
+
+        .industrial-park__content
+
+            @include desktop-small
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+
+            span
+                font-weight: 700
+                max-width: 36%
+                width: 100%
+                font-size: calc(13px + 1vw)
+                text-align: left
+                display: flex
+                line-height: 38px
+
+                @include desktop-small
+                    max-width: 78%
+                    line-height: 33px
+                    font-size: calc(22px + 1vw)
+
+        .industrial-park__content.opacity-anim
+            transition-delay: 0.3s
+        .industrial-park__text
+            position: relative
+            max-width: 26%
+
+            @include desktop-small
+                max-width: 75%
+                display: flex
+                gap: 136px
+                align-items: center
+                justify-content: center
+
+            @include mobile-big
+                gap: 60px
+
+            @include mobile
+                gap: 30px
+
+            .zvezdochka
+                left: -40%
+                top: 25px
+                @include desktop-small
+                    position: static
+                    height: 55px
+                    width: 36px
+
+            img
+                width: 55px
+                height: 55px
+            span
+                font-size: calc(12px + 0.5vw)
+                font-weight: 500
+
+                @include desktop-small
+                    font-size: calc(18px + 0.5vw)
+                    line-height: 30px
+        .industrial-park__text.opacity-anim
+            transition-delay: 0.6s
+        .industrial-park__year
+            width: 100%
+            display: flex
+            justify-content: flex-start
+            margin-top: -182px
+
+            @include desktop-small
+                margin-top: 0px
+            span
+                color: #f3f3f3
+                font-size: calc(5em + 10vw)
+                font-weight: 700
+                letter-spacing: -11px
+                text-align: end
+                width: 100%
+
+                @include desktop-small
+                    text-align: center
+                    font-size: calc(13em + 10vw)
+                    line-height: 242px
+
+                @include mobile-big
+                    font-size: calc(3em + 34vw)
+        .industrial-park__year.opacity-anim
+            transition-delay: 0.9s
+.industrial-park-info
+    display: flex
+    justify-content: center
+    width: 100%
+    margin-top: -100px
+    position: relative
+    @include desktop-small
+        margin-top: 0px
+
+    .industrial-park-info__wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        gap: 80px
+
+        @include mobile-big
+            gap: 0px
+
+        .industrial-park-info__items
+            max-width: 80%
+            display: grid
+            grid-template-columns: repeat(2, minmax(400px, 1fr))
+            gap: 30px
+
+            @include desktop-small
+                grid-template-columns: repeat(1, minmax(400px, 1fr))
+                max-width: 90%
+                justify-content: center
+                align-items: center
+
+            @include mobile-big
+                max-width: 100%
+                grid-template-columns: repeat(1, minmax(200px, 1fr))
+
+            .industrial-park-info__item
+                padding: 30px
+                object-fit: cover
+                position: relative
+
+                .industrial-park-info__item__img
+                    width: 100%
+
+                .half-circle
+                    position: absolute
+                    transform: rotate(270deg)
+                    left: -40px
+                    width: 35px
+                    top: 0px
+                    height: 35px
+
+                    @media (max-width: 1250px)
+                        top: auto
+                        bottom: 5px
+
+                    @include mobile-big
+                        bottom: -30px
+                        left: 10%
+                        transform: rotate(180deg)
+
+                .industrial-park-info__item__icon
+                    font-size: 60px
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    border-radius: 60px
+                    background: white
+                    color: $blue
+                    height: 55px
+                    max-width: 55px
+
+                &:last-child
+                    background: $blue
+                    display: flex
+                    flex-direction: column
+                    height: 100%
+                    justify-content: space-between
+                    gap: 100px
+
+                    @include desktop-small
+                        gap: 30px
+
+                    @include mobile-big
+                        padding: 20px
+
+                    ul
+                        list-style-type: disc
+                        display: flex
+                        flex-direction: column
+                        gap: 10px
+                        padding-left: 20px
+
+                        li
+                            color: white
+                            font-size: calc(2px + 1.3vw)
+                            line-height: calc(1px + 2vw)
+
+                            @include desktop-small
+                                color: white
+                                font-size: calc(2px + 2vw)
+                                line-height: calc(1px + 3vw)
+
+                            @include mobile-big
+                                font-size: calc(1px + 4vw)
+                                line-height: 31px
+
+                            @include mobile
+                                line-height: 24px
+                                font-size: 15px
+
+                &:nth-child(2)
+                    @include desktop-small
+                        grid-area: 4/1/4/1
+
+                &:nth-child(3)
+                    display: flex
+                    justify-content: center
+                    align-items: center
+
+                    span
+                        font-size: calc(13px + 1vw)
+                        font-weight: 700
+                        width: 100%
+                        display: flex
+                        max-width: 290px
+
+                        @include desktop-small
+                            font-size: calc(7px + 2vw)
+                            max-width: 409px
+
+                        @include mobile-big
+                            font-size: calc(3px + 4vw)
+
+                &:first-child
+                    padding: 0px
+
+        .industrial-park-info__btns
+            display: flex
+            justify-content: space-between
+            max-width: 80%
+            width: 100%
+
+            .blue-button
+                max-width: 600px
+                display: flex
+                justify-content: center
+                justify-content: center
+                height: 40px
+                width: auto
+                align-items: center
+                font-size: calc(4px + 1vw)
+
+                @include desktop-small
+                    font-size: 18px
+                    max-width: none
+
+                @include mobile
+                    font-size: 16px
+            img
+                max-width: 56px
+
+                @include mobile-big
+                    display: none

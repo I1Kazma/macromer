@@ -1,0 +1,241 @@
+@import '../utils/utils'
+.page-banner
+    position: relative
+    min-height: 700px
+    overflow: hidden
+    display: flex
+    align-items: flex-end
+    margin: -70px 20px 0px
+
+    @media (max-width: 1450px)
+        min-height: 700px
+
+    @include desktop-small
+        min-height: 620px
+
+    @include tablet
+        min-height: 670px
+
+    @include mobile-big
+        min-height: 545px
+
+    @include mobile
+        min-height: 515px
+
+    .page-banner__background
+        position: absolute
+        display: flex
+        flex-direction: column
+        width: 100%
+        z-index: -1
+        top: 0px
+
+        @include mobile-big
+            gap: 30px
+
+        @include mobile
+            top: 45px
+
+        span
+            font-size: calc(5em + 10vw)
+            /*font-size: 205px*/
+            color: #f3f3f3
+            font-weight: 700
+            line-height: 0.9
+
+            @include desktop-small
+                font-size: calc(4em + 10vw)
+
+            @include tablet
+                font-size: calc(3em + 10vw)
+
+            @include mobile-big
+                font-size: calc(2em + 10vw)
+
+            @include mobile
+                font-size: calc(1em + 10vw)
+
+            div
+
+                .zvezdochka-wrapper
+                    position: absolute
+                    width: 100%
+                    top: 0px
+                    height: 100%
+                    display: flex
+                    right: 0px
+                    align-items: center
+                    justify-content: center
+                    padding-top: calc(100% - 64%)
+
+                    @include tablet
+                        display: none
+
+                    @include mobile-big
+                        display: flex
+
+                .page-banner__zvezdochka
+                    width: 100%
+                    max-width: 35px
+                    height: 35px
+                    animation-name: el-rotate
+                    animation-duration: 5s
+                    animation-iteration-count: infinite
+                    display: flex
+                    align-items: center
+
+                    @include mobile-big
+                        display: flex
+                        height: 15px
+                        width: 15px
+
+                    @include mobile
+                        height: 10px
+                        width: 10px
+
+            &:first-child
+                text-align: left
+
+                @include desktop-small
+                    opacity: 0.5
+            &:nth-child(2)
+                text-align: center
+
+                @include desktop-small
+                    opacity: 0.5
+
+            &:nth-child(2).opacity-anim.opacity-show
+                transition-delay: 0.3s
+
+            &:last-child
+                text-align: center
+                font-size: 100px
+                padding-top: 30px
+                padding-left: 300px
+
+                @include tablet
+                    padding-left: 0px
+                    text-align: end
+
+                @include mobile-big
+                    padding-top: 0px
+                    font-size: calc(2em + 10vw)
+                &:last-child.opacity-anim.opacity-show
+                    transition-delay: 0.6s
+
+    .page-banner__icon
+        position: absolute
+        left: 0px
+        bottom: 350px
+        max-width: 40px
+
+        @include tablet
+            left: 30px
+            bottom: 350px
+            max-width: 40px
+
+        @include mobile-big
+            left: 8%
+            bottom: 300px
+            max-width: 25px
+
+        @include mobile
+            left: 8%
+            bottom: 270px
+            max-width: 25px
+
+    .page-banner__title
+
+        .page-banner__title__layout
+            display: flex
+            width: 100%
+            gap: 20px
+            align-items: end
+
+            @include tablet
+                flex-direction: column
+                align-items: flex-start
+
+            @include mobile
+                gap: 30px
+
+            h2, h1
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                line-height: 0.9
+                font-weight: 700
+                min-width: 778px
+                position: relative
+                font-size: calc(1em + 6vw)
+
+                @include desktop-small
+                    min-width: auto
+
+                @include mobile-big
+
+                @include mobile
+
+            .page-banner__links
+                display: flex
+                gap: 10px
+                justify-content: flex-end
+                width: 100%
+                flex-wrap: wrap
+
+                @include desktop-small
+                    display: flex
+                    gap: 20px
+                    justify-content: flex-start
+
+                li
+
+                    a
+                        max-width: none
+                        width: 100%
+                        font-size: calc(2px + 1vw)
+
+                        @include desktop-small
+                            font-size: calc(10px + 1vw)
+
+            .page-banner__button
+                border-radius: 10px
+                background-color: $blue
+                border: none
+                padding: 20px
+                color: white
+                transition: 0.3s ease
+                cursor: pointer
+                font-size: 20px
+
+                &:hover
+                    background: $blue-hover
+            .rectangle-wrapper
+                margin-left: 35px
+
+                @include desktop-small
+                    position: absolute
+                    bottom: 17px
+                    left: 50%
+
+                @include tablet
+                    bottom: 67px
+                    right: 20px
+                    left: auto
+
+                @media (max-width: 620px)
+                    bottom: 16px
+                    left: 37%
+                @include mobile
+                    left: 45%
+
+            .page-banner__title__content
+                max-width: 405px
+                width: 100%
+                span
+                    font-size: 23px
+                    font-weight: 500
+                    @include mobile-big
+                        font-size: 20px
+                    @include mobile
+                        font-size: 15px

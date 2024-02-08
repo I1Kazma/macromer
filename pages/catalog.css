@@ -1,0 +1,45 @@
+.catalog-page header, .catalog-page main {
+  background: #f8f9fd;
+}
+.catalog-page .page-banner__title {
+  width: 100%;
+}
+.catalog-page .page-banner {
+  position: relative;
+  min-height: auto;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  background: #f8f9fd;
+  justify-content: center;
+  margin: 0px 20px;
+  padding: 0px 20px;
+}
+.catalog-page .page-banner .page-banner__button {
+  max-width: 300px;
+  width: 100%;
+  height: 106px;
+  border-radius: 10px;
+  background-color: #00a0df;
+  border: none;
+  padding: 20px;
+  color: white;
+  transition: 0.3s ease;
+  cursor: pointer;
+  font-size: 30px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.catalog-page .page-banner__title__layout {
+  flex-direction: column;
+  align-items: baseline !important;
+  gap: 50px !important;
+}
+.catalog-page .page-banner__title__layout h1 {
+  font-size: 130px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -5px;
+}/*# sourceMappingURL=catalog.css.map */
