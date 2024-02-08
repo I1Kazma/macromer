@@ -4296,7 +4296,7 @@ h2 {
 }
 .products .products__items .products__item ul li {
   font-size: calc(7px + 1vw);
-  line-height: 24px;
+  line-height: 1.1;
 }
 @media (max-width: 1300px) {
   .products .products__items .products__item ul li {
