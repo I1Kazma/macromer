@@ -268,6 +268,11 @@ h2 {
     height: 150px !important;
   }
 }
+@media (max-width: 576px) {
+  .how-to-buy__page .page-banner {
+    height: auto !important;
+  }
+}
 .how-to-buy__page .page-banner h1 {
   font-size: 100px;
   line-height: 130% !important;
@@ -343,6 +348,12 @@ h2 {
 @media (max-width: 992px) {
   .how-to-buy__page .page-banner__title__layout h1 {
     font-size: calc(1px + 12vw) !important;
+  }
+}
+@media (max-width: 576px) {
+  .how-to-buy__page .page-banner__title__layout h1 {
+    letter-spacing: -3px;
+    font-size: calc(1px + 16vw) !important;
   }
 }
 
@@ -877,7 +888,8 @@ h2 {
 }
 @media (max-width: 380px) {
   .industrial-park-info .industrial-park-info__wrapper .industrial-park-info__btns .blue-button {
-    font-size: 16px;
+    font-size: calc(2px + 4vw);
+    width: 100%;
   }
 }
 .industrial-park-info .industrial-park-info__wrapper .industrial-park-info__btns img {

@@ -5,6 +5,9 @@
         @include desktop-small
             height: 150px !important
 
+        @include mobile-big
+            height: auto !important
+
         h1
             font-size: 100px
             line-height: 130% !important
@@ -73,3 +76,7 @@
 
             @include desktop-small
                 font-size: calc(1px + 12vw) !important
+
+            @include mobile-big
+                letter-spacing: -3px
+                font-size: calc(1px + 16vw) !important
