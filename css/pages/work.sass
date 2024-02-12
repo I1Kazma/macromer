@@ -393,9 +393,12 @@
                     margin-bottom: 0px
                     min-height: 400px
 
+                @include tablet
+                    padding: 20px
+
                 @include mobile-big
                     min-height: 370px
-                    padding: 30px
+                    padding: 20px
 
                 .zvezdochka
                     width: 35px
@@ -404,10 +407,10 @@
 
                 ul
                     list-style-type: disc
-                    padding: 0px 30px
+                    padding-left: 30px
 
                     @include mobile-big
-                        padding: 0px 20px
+                        padding-left: 20px
 
                     li
                         color: white
@@ -424,7 +427,7 @@
                             font-size: calc(7px + 2vw)
 
                         @include mobile
-                            font-size: calc(10px + 2vw)
+                            font-size: calc(6px + 3vw)
 
             &:nth-child(6)
                 grid-area: 3 / 2 / 5 / 3

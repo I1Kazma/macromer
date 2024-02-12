@@ -407,7 +407,12 @@ h2 {
     height: auto;
     max-width: none;
     width: auto;
-    font-size: calc(1px + 6vw) !important;
+    font-size: calc(1px + 3vw) !important;
+  }
+}
+@media (max-width: 576px) {
+  .catalog-page .page-banner .page-banner__button {
+    font-size: calc(1px + 5vw) !important;
   }
 }
 .catalog-page .page-banner__title__layout {
@@ -2373,10 +2378,15 @@ h2 {
     min-height: 400px;
   }
 }
+@media (max-width: 768px) {
+  .workers .workers__items .workers__item:nth-child(5) {
+    padding: 20px;
+  }
+}
 @media (max-width: 576px) {
   .workers .workers__items .workers__item:nth-child(5) {
     min-height: 370px;
-    padding: 30px;
+    padding: 20px;
   }
 }
 .workers .workers__items .workers__item:nth-child(5) .zvezdochka {
@@ -2386,11 +2396,11 @@ h2 {
 }
 .workers .workers__items .workers__item:nth-child(5) ul {
   list-style-type: disc;
-  padding: 0px 30px;
+  padding-left: 30px;
 }
 @media (max-width: 576px) {
   .workers .workers__items .workers__item:nth-child(5) ul {
-    padding: 0px 20px;
+    padding-left: 20px;
   }
 }
 .workers .workers__items .workers__item:nth-child(5) ul li {
@@ -2413,7 +2423,7 @@ h2 {
 }
 @media (max-width: 380px) {
   .workers .workers__items .workers__item:nth-child(5) ul li {
-    font-size: calc(10px + 2vw);
+    font-size: calc(6px + 3vw);
   }
 }
 .workers .workers__items .workers__item:nth-child(6) {
