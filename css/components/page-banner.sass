@@ -169,8 +169,12 @@
                 position: relative
                 font-size: calc(1em + 6vw)
 
+                @media (max-width: 1450px)
+                    font-size: calc(1em + 5vw)
+
                 @include desktop-small
                     min-width: auto
+                    font-size: calc(1em + 6vw)
 
                 @include mobile-big
 

@@ -2,8 +2,11 @@
     .page-banner
         min-height: 800px
 
+        @media (max-width: 1450px)
+            min-height: 650px
+
         @include desktop-small
-            min-height: 620px
+            min-height: 590px
 
         @include tablet
             min-height: 670px
