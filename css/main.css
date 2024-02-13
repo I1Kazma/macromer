@@ -263,6 +263,30 @@ h2 {
   stroke: white;
 }
 
+.main-page .page-banner {
+  min-height: 800px;
+}
+@media (max-width: 992px) {
+  .main-page .page-banner {
+    min-height: 620px;
+  }
+}
+@media (max-width: 768px) {
+  .main-page .page-banner {
+    min-height: 670px;
+  }
+}
+@media (max-width: 576px) {
+  .main-page .page-banner {
+    min-height: 545px;
+  }
+}
+@media (max-width: 380px) {
+  .main-page .page-banner {
+    min-height: 515px;
+  }
+}
+
 @media (max-width: 992px) {
   .how-to-buy__page .page-banner {
     height: 150px !important;
