@@ -6476,14 +6476,30 @@ h2 {
     grid-template-rows: auto;
   }
 }
-.values .values__wrapper .value__items .value__item, .values .values__wrapper .value__items .value__item-img {
-  color: #00a0df;
+.values .values__wrapper .value__items .value__item-img {
   position: relative;
   display: flex;
   height: 100%;
 }
+.values .values__wrapper .value__items .value__item-img img {
+  position: absolute;
+  inset: 0;
+  max-width: 300px;
+}
 @media (max-width: 768px) {
-  .values .values__wrapper .value__items .value__item, .values .values__wrapper .value__items .value__item-img {
+  .values .values__wrapper .value__items .value__item-img img {
+    display: flex;
+    position: static;
+    opacity: 1;
+  }
+}
+.values .values__wrapper .value__items .value__item {
+  color: #00a0df;
+  display: flex;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .values .values__wrapper .value__items .value__item {
     grid-area: auto !important;
     padding-top: 0px !important;
     flex-direction: column;
@@ -6491,53 +6507,65 @@ h2 {
   }
 }
 @media (max-width: 576px) {
-  .values .values__wrapper .value__items .value__item, .values .values__wrapper .value__items .value__item-img {
+  .values .values__wrapper .value__items .value__item {
     grid-area: auto !important;
     align-items: center;
   }
 }
-.values .values__wrapper .value__items .value__item span, .values .values__wrapper .value__items .value__item-img span {
+.values .values__wrapper .value__items .value__item span {
   font-size: calc(8px + 1vw);
   font-weight: 600;
 }
 @media (max-width: 768px) {
-  .values .values__wrapper .value__items .value__item span, .values .values__wrapper .value__items .value__item-img span {
+  .values .values__wrapper .value__items .value__item span {
     font-size: calc(1px + 4vw);
+    width: 100%;
   }
 }
-.values .values__wrapper .value__items .value__item img, .values .values__wrapper .value__items .value__item-img img {
+.values .values__wrapper .value__items .value__item .zvezdochka {
+  width: 35px;
+  height: 35px;
+}
+.values .values__wrapper .value__items .value__item .zvezdochka img {
+  position: static;
+  max-width: none !important;
+  width: 35px;
+  height: 35px;
+}
+.values .values__wrapper .value__items .value__item img {
   position: absolute;
   inset: 0;
   max-width: 300px;
+  left: 27%;
+  top: 168px;
+  max-width: 15%;
+}
+@media (max-width: 1250px) {
+  .values .values__wrapper .value__items .value__item img {
+    left: 35%;
+    top: 140px;
+    max-width: 29%;
+  }
 }
 @media (max-width: 768px) {
-  .values .values__wrapper .value__items .value__item img, .values .values__wrapper .value__items .value__item-img img {
+  .values .values__wrapper .value__items .value__item img {
+    display: flex;
     position: static;
     opacity: 1;
+    max-width: 100%;
     width: calc(100px + 24vw);
   }
 }
-.values .values__wrapper .value__items .value__item .zvezdochka, .values .values__wrapper .value__items .value__item-img .zvezdochka {
-  width: 35px;
-  height: 35px;
-}
-.values .values__wrapper .value__items .value__item .zvezdochka img, .values .values__wrapper .value__items .value__item-img .zvezdochka img {
-  width: 35px;
-  height: 35px;
-}
-.values .values__wrapper .value__items .value__item .zvezdochka:nth-child(2), .values .values__wrapper .value__items .value__item-img .zvezdochka:nth-child(2) {
+.values .values__wrapper .value__items .value__item .zvezdochka:nth-child(2) {
   left: 40px;
 }
+.values .values__wrapper .value__items .value__item:nth-child(1) {
+  position: relative;
+}
 @media (max-width: 768px) {
-  .values .values__wrapper .value__items .value__item:nth-child(1), .values .values__wrapper .value__items .value__item-img {
+  .values .values__wrapper .value__items .value__item:nth-child(1) {
     display: none;
   }
-}
-.values .values__wrapper .value__items .value__item:nth-child(2) span:hover .value__item-img .value__item-1 {
-  opacity: 1 !important;
-}
-.values .values__wrapper .value__items .value__item:nth-child(3) span:hover .value__item-img .value__item-2 {
-  opacity: 1 !important;
 }
 .values .values__wrapper .value__items .value__item:nth-child(4) {
   grid-area: 2/1/2/1;
@@ -6546,19 +6574,18 @@ h2 {
 .values .values__wrapper .value__items .value__item:nth-child(5) {
   grid-area: 2/2/2/3;
 }
-.values .values__wrapper .value__items .value__item:nth-child(5) span:hover .value__item-img .value__item-3 {
-  opacity: 1 !important;
-}
 .values .values__wrapper .value__items .value__item-img {
   grid-area: 2/2/2/2;
   padding-top: 50px;
 }
+@media (max-width: 768px) {
+  .values .values__wrapper .value__items .value__item-img {
+    grid-area: 6/1/6/2;
+  }
+}
 .values .values__wrapper .value__items .value__item:nth-child(6) {
   grid-area: 2/3/2/3;
   padding-top: 50px;
-}
-.values .values__wrapper .value__items .value__item:nth-child(6) span:hover .value__item-img .value__item-4 {
-  opacity: 1 !important;
 }
 .values .values__wrapper .value__items .value__item:nth-child(7) {
   grid-area: 2/4/2/4;
@@ -6570,16 +6597,10 @@ h2 {
     padding: 0px;
   }
 }
-.values .values__wrapper .value__items .value__item:nth-child(7) span:hover .value__item-img .value__item-5 {
-  opacity: 1 !important;
-}
 @media (max-width: 768px) {
   .values .values__wrapper .value__items .value__item:nth-child(8) {
     display: none;
   }
-}
-.values .values__wrapper .value__items .value__item:nth-child(9) span:hover .value__item-img .value__item-6 {
-  opacity: 1 !important;
 }
 @media (max-width: 768px) {
   .values .values__wrapper .value__items .value__item:nth-child(9) {
@@ -6590,9 +6611,6 @@ h2 {
   .values .values__wrapper .value__items .value__item:nth-child(10) {
     grid-area: 3/2/3/2;
   }
-}
-.values .values__wrapper .value__items .value__item:nth-child(10) span:hover .value__item-img .value__item-7 {
-  opacity: 1 !important;
 }
 @media (max-width: 576px) {
   .values .values__wrapper .value__items .value__item:nth-child(10) {
@@ -6626,6 +6644,10 @@ h2 {
   .values .values__wrapper .value__items .value__item:nth-child(11) span {
     width: 100%;
   }
+}
+.values .values__wrapper .value__items #value__item__1:hover .value__item-1,
+.values .values__wrapper .value__items #value__item__2:hover .value__item-2, .values .values__wrapper .value__items #value__item__3:hover .value__item-3, .values .values__wrapper .value__items #value__item__4:hover .value__item-4, .values .values__wrapper .value__items #value__item__5:hover .value__item-5, .values .values__wrapper .value__items #value__item__6:hover .value__item-6, .values .values__wrapper .value__items #value__item__7:hover .value__item-7 {
+  opacity: 1 !important;
 }
 
 .value__item-1, .value__item-2, .value__item-3, .value__item-4, .value__item-5, .value__item-6, .value__item-7 {
