@@ -41,6 +41,6 @@ body {
   perspective: 1px;
   transform-style: preserve-3d;
 }
-body, body * {
+body.mission, body.mission * {
   transform-style: preserve-3d;
 }/*# sourceMappingURL=utils.css.map */
