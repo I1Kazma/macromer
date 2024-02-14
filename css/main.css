@@ -29,36 +29,23 @@
     width: 115px;
   }
 }
-@keyframes el-rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-@keyframes el-height {
-  0% {
-    top: 100px;
-  }
-  50% {
-    top: 70px;
-  }
-  100% {
-    top: 100px;
-  }
+
+body {
+  overflow: auto;
+  perspective: 1px;
+  transform-style: preserve-3d;
 }
-@keyframes el-width {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 115px;
-  }
+body, body * {
+  transform-style: preserve-3d;
 }
+
 /*Цвета проекта*/
 /*Шрифт проекта*/
 /*Базовые стили проекта*/
@@ -3811,36 +3798,6 @@ h2 {
   transition-delay: 0.9s;
 }
 
-@keyframes el-rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes el-height {
-  0% {
-    top: 100px;
-  }
-  50% {
-    top: 70px;
-  }
-  100% {
-    top: 100px;
-  }
-}
-@keyframes el-width {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 115px;
-  }
-}
 .page-banner {
   position: relative;
   min-height: 700px;
@@ -6005,6 +5962,12 @@ h2 {
   }
 }
 
+@media (max-width: 992px) {
+  body, body * {
+    transform-style: unset;
+  }
+}
+
 .people {
   margin: 0px 20px 0px 80px;
   max-width: 1200px;
@@ -6023,7 +5986,7 @@ h2 {
 }
 @media (max-width: 576px) {
   .people {
-    margin: 0px 20px 0px 40px;
+    margin: 0px 60px 0px 60px;
     width: auto;
     padding: 0px;
     gap: 30px;
@@ -6032,6 +5995,54 @@ h2 {
 @media (max-width: 380px) {
   .people {
     margin: 0px 20px;
+  }
+}
+.people .people__item:first-child .people__item-img {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  transform-style: preserve-3d;
+  position: relative;
+  perspective: 1px;
+  max-width: 360px;
+  width: 5000px;
+}
+@media (max-width: 992px) {
+  .people .people__item:first-child .people__item-img {
+    align-items: flex-start;
+    width: auto;
+  }
+}
+@media (max-width: 576px) {
+  .people .people__item:first-child .people__item-img {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+@media (max-width: 380px) {
+  .people .people__item:first-child .people__item-img {
+    flex-direction: column-reverse;
+    align-items: end;
+  }
+}
+.people .people__item:first-child .people__item-img img:first-child {
+  transform: translateZ(-1px) scale(3);
+  top: -42%;
+  left: -390px;
+  position: absolute;
+  transition: 0.3s ease;
+}
+@media (max-width: 992px) {
+  .people .people__item:first-child .people__item-img img:first-child {
+    position: static;
+    transform: none;
+  }
+}
+@media (max-width: 576px) {
+  .people .people__item:first-child .people__item-img img:first-child {
+    width: 100%;
   }
 }
 .people .people__item {
@@ -6097,6 +6108,7 @@ h2 {
 @media (max-width: 992px) {
   .people .people__item .people__item__wrapper .people__item-img {
     align-items: flex-start;
+    max-width: none;
   }
 }
 @media (max-width: 576px) {
@@ -6124,6 +6136,16 @@ h2 {
   height: 17.5px;
   left: -40px;
   top: 213px;
+}
+@media (max-width: 1250px) {
+  .people .people__item .people__item__wrapper .people__item-img .half-circle {
+    left: -60px;
+  }
+}
+@media (max-width: 1100px) {
+  .people .people__item .people__item__wrapper .people__item-img .half-circle {
+    left: -80px;
+  }
 }
 @media (max-width: 992px) {
   .people .people__item .people__item__wrapper .people__item-img .half-circle {
@@ -6181,8 +6203,8 @@ h2 {
 @media (max-width: 576px) {
   .people .people__item .people__item__wrapper .people__item-text .people-el {
     position: absolute;
-    top: 370px;
-    left: -31px;
+    top: 440px;
+    left: -46px;
   }
 }
 @media (max-width: 380px) {
@@ -6195,7 +6217,7 @@ h2 {
 }
 @media (max-width: 576px) {
   .people .people__item .people__item__wrapper .people__item-text .people-el .people-el__img {
-    width: 25px;
+    width: 35px;
   }
 }
 @media (max-width: 380px) {
